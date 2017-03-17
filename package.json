@@ -1,21 +1,21 @@
 {
-  "name": "my-framework",
+  "name": "alfa-framework",
   "version": "1.0.0",
-  "description": "Desenvolvimento de Framwork para Iniciantes em CSS",
+  "description": "Framework para Iniciantes em CSS",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Pegou? Pegou!\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EliabeJr/ej-framework.git"
+    "url": "git+https://github.com/EliabeJr/alfa-framework.git"
   },
   "author": "Eliabe Junior",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/EliabeJr/ej-framework/issues"
+    "url": "https://github.com/EliabeJr/alfa-framework/issues"
   },
-  "homepage": "https://github.com/EliabeJr/ej-framework#readme",
+  "homepage": "https://github.com/EliabeJr/alfa-framework#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-clean-css": "^2.3.2",

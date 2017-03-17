@@ -1,5 +1,20 @@
 @import "variables";
 @import "mixins";
 @import "modules/base";
-@import "modules/typo";
 @import "modules/grid";
+@import "modules/typo";
+@import "modules/buttons";
+@import "modules/navbar";
+@import "modules/animations";
+
+header {
+	@include construct-header($gray);
+}
+
+.navbar {
+	@include construct-navbar($bg-dark, fixed);
+}
+
+#get-started {
+	@include construct-section($bg-dark, 200px);
+}

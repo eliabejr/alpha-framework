@@ -18,8 +18,8 @@ gulp.task('min-css', function(){
 
 
 gulp.task('watch', function() {
-    gulp.watch('source/scss/**/*.scss', ['sass']);
-    gulp.watch('source/css/**/*.css', ['min-css']);
+    gulp.watch('source/scss/**/*', ['sass']);
+    gulp.watch('source/css/**/*', ['min-css']);
 });
 
 gulp.task('default',['sass','min-css','watch']);

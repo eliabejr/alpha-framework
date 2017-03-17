@@ -1,11 +1,19 @@
-// SETTINGS
-
-$total-col:	12;
-$color-theme:rgb(255, 46, 99);
-
 // COLORS
+
+$blue: #1e90ff;
+$red: #ff2e63;
+$gray: #f7f7f7;
 
 $bg-dark: #252A34;
 $bg-white: #f9f9f9;
 $text-dark: $bg-dark;
 $text-white: $bg-white;
+
+
+// SETTINGS
+
+$total-col:	12;
+$color-theme: $blue;
+$theme-schema: $bg-white;
+$navbar-bg: $bg-dark;
+$navbar-height: 12vh;

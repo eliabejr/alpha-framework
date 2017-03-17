@@ -1,0 +1,47 @@
+@mixin construct-body($body-bg) {
+	background-color: $body-bg;
+
+	@if (lightness($body-bg) < 30) {
+  		color: $text-white;
+	} @else {
+  		color: $text-dark;
+	}
+}
+
+@mixin construct-navbar($navbar-bg, $navbar-position) {
+	width: 100%;
+	display: block;
+	height: $navbar-height;
+	position: $navbar-position;
+	line-height: $navbar-height;
+	background-color: $navbar-bg;
+
+	@if (lightness($navbar-bg) < 30) {
+  		color: $text-white;
+	} @else {
+  		color: $text-dark;
+	}
+}
+
+@mixin construct-header($header-bg) {
+	background-color: $header-bg;
+
+	@if (lightness($header-bg) < 30) {
+  		color: $text-white;
+	} @else {
+  		color: $text-dark;
+	}
+}
+
+@mixin construct-section($section-bg, $section-height) {
+	background-color: $section-bg;
+	height: $section-height;
+	padding-top: ($section-height/3);
+	display: block;
+
+	@if (lightness($section-bg) < 30) {
+  		color: $text-white;
+	} @else {
+  		color: $text-dark;
+	}
+}
