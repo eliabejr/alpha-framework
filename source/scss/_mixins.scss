@@ -8,7 +8,7 @@
 	}
 }
 
-@mixin construct-navbar($navbar-bg, $navbar-position) {
+@mixin construct-navbar($navbar-bg) {
 	width: 100%;
 	display: block;
 	height: $navbar-height;
@@ -25,6 +25,13 @@
 
 @mixin construct-header($header-bg) {
 	background-color: $header-bg;
+
+	@if ($navbar-position == fixed) {
+  		padding-top: (42vh-$navbar-height);
+		margin-top: $navbar-height;	
+	} @else {
+  		padding-top: (42vh-$navbar-height);
+	}
 
 	@if (lightness($header-bg) < 30) {
   		color: $text-white;
@@ -43,5 +50,22 @@
   		color: $text-white;
 	} @else {
   		color: $text-dark;
+	}
+}
+
+@mixin construct-button($name, $color) {
+	.btn-#{$name} {
+		color: $color;
+		border-color: $color;
+
+		& a {
+			color: inherit;
+		}
+
+		&:hover {
+			color: white;
+			background: $color;
+			border-color: $color;
+		}
 	}
 }

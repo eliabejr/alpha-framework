@@ -12,9 +12,11 @@ header {
 }
 
 .navbar {
-	@include construct-navbar($bg-dark, fixed);
+	@include construct-navbar($bg-dark);
 }
 
 #get-started {
 	@include construct-section($bg-dark, 200px);
 }
+
+@include construct-button(blue,$blue);

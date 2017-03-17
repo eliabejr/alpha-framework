@@ -7,13 +7,13 @@ gulp.task('sass', function () {
 	return gulp.src("source/scss/**/*")
 			.pipe(sass())
 			.on("error", notify.onError({title:"Erro ao compilar CSS", message:"<%= error.message %>"}))
-			.pipe(gulp.dest("./source/css"))
+			.pipe(gulp.dest("source/css"))
 });
 
 gulp.task('min-css', function(){
   return gulp.src('source/css/style.css')
     		.pipe(cssmin({compatibility: 'ie8'}))
-   			.pipe(gulp.dest('./build/css'));
+   			.pipe(gulp.dest('build/css'));
 });
 
 

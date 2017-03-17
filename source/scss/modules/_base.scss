@@ -32,8 +32,7 @@ nav {
 }
 
 header {
-	padding-top: (42vh-$navbar-height);
-	margin-top: $navbar-height;
+	display: block;
 }
 
 section {
@@ -44,6 +43,13 @@ button {
 	background: transparent;
 	font-size: 1rem;
 	transition: all .2s ease-in-out;
+	border: 3px
+}
+
+hr {
+	height: 2px;
+	width: 100%;
+	display: block;
 }
 
 .full {

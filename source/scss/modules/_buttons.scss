@@ -7,36 +7,6 @@
     margin-bottom: 10px;
 }
 
-.btn-blue {
-	color: $blue;
-
-	& a {
-		color: inherit;
-
-	}
-
-	&:hover {
-		color: white;
-		background: $blue;
-		border-color: $blue;
-	}
-}
-
-.btn-red {
-	color: $red;
-
-	& a {
-		color: inherit;
-
-	}
-
-	&:hover {
-		color: white;
-		background: $red;
-		border-color: $red;
-	}
-}
-
 .rounded {
 	border-radius: 30px;
 }
