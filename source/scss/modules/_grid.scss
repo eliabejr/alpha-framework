@@ -9,6 +9,10 @@
 	margin: 0 auto;
 }
 
+.row {
+	margin: 20px 0;
+}
+
 .row:after {
 	content: '';
 	display: table;
@@ -19,19 +23,50 @@
 	position: relative;
 	min-height: 1px;
 	float: left;
-	padding: 0 10px;
-
-	&:first-child {
-        padding-left: 0;
-	}
-
-  	&:last-child {
-        padding-right: 0;
-	}
+	padding: 10px;
 }
 
 @for $i from 1 through $total-col {
 	.col-#{$i} {
 		width: percentage($i/$total-col);
+	}
+}
+
+@media (max-width: $mobile) {
+
+	.col-1, .col-2 {
+		width: 50%;
+	}
+	
+	@for $i from 3 through $total-col {
+		.col-#{$i} {
+			width: 100%;
+		}
+	}
+
+}
+
+@media (min-width: $mobile + 1) and (max-width: $smartphone) {
+	.col-1, .col-2, .col-3, .col-4 {
+		width: 50%;
+	}
+	
+	@for $i from 5 through $total-col {
+		.col-#{$i} {
+			width: 100%;
+		}
+	}
+
+}
+
+@media (min-width: $tablet + 1) {
+	.col {
+		&:first-child {
+	        padding-left: 0;
+		}
+
+	  	&:last-child {
+	        padding-right: 0;
+		}
 	}
 }

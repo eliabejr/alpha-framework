@@ -77,6 +77,9 @@ button {
   width: 85vw;
   margin: 0 auto; }
 
+.row {
+  margin: 20px 0; }
+
 .row:after {
   content: '';
   display: table;
@@ -86,11 +89,7 @@ button {
   position: relative;
   min-height: 1px;
   float: left;
-  padding: 0 10px; }
-  .col:first-child {
-    padding-left: 0; }
-  .col:last-child {
-    padding-right: 0; }
+  padding: 10px; }
 
 .col-1 {
   width: 8.33333%; }
@@ -127,6 +126,56 @@ button {
 
 .col-12 {
   width: 100%; }
+
+@media (max-width: 360px) {
+  .col-1, .col-2 {
+    width: 50%; }
+  .col-3 {
+    width: 100%; }
+  .col-4 {
+    width: 100%; }
+  .col-5 {
+    width: 100%; }
+  .col-6 {
+    width: 100%; }
+  .col-7 {
+    width: 100%; }
+  .col-8 {
+    width: 100%; }
+  .col-9 {
+    width: 100%; }
+  .col-10 {
+    width: 100%; }
+  .col-11 {
+    width: 100%; }
+  .col-12 {
+    width: 100%; } }
+
+@media (min-width: 361px) and (max-width: 640px) {
+  .col-1, .col-2, .col-3, .col-4 {
+    width: 50%; }
+  .col-5 {
+    width: 100%; }
+  .col-6 {
+    width: 100%; }
+  .col-7 {
+    width: 100%; }
+  .col-8 {
+    width: 100%; }
+  .col-9 {
+    width: 100%; }
+  .col-10 {
+    width: 100%; }
+  .col-11 {
+    width: 100%; }
+  .col-12 {
+    width: 100%; } }
+
+@media (min-width: 961px) {
+  .col:first-child {
+    padding-left: 0; }
+  .col:last-child {
+    padding-right: 0; } }
 
 body {
   font-family: sans-serif;
@@ -180,7 +229,8 @@ h3 {
   border-radius: 30px; }
 
 .navbar {
-  top: 0; }
+  top: 0;
+  z-index: 10; }
 
 .navbar li, .nav-menu ul {
   display: inline; }

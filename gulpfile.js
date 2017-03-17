@@ -11,7 +11,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('min-css', function(){
-  return gulp.src('source/css/**/*')
+  return gulp.src('source/css/style.css')
     		.pipe(cssmin({compatibility: 'ie8'}))
    			.pipe(gulp.dest('./build/css'));
 });
@@ -19,7 +19,7 @@ gulp.task('min-css', function(){
 
 gulp.task('watch', function() {
     gulp.watch('source/scss/**/*', ['sass']);
-    gulp.watch('source/css/**/*', ['min-css']);
+    gulp.watch('source/css/style.css', ['min-css']);
 });
 
 gulp.task('default',['sass','min-css','watch']);
