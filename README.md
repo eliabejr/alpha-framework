@@ -1,6 +1,6 @@
-# alfa-framework
+# alpha-framework
 
-Alfa Framework é um conjunto de soluções CSS que auxiliam desenvolvedores novatos a se habituar com frameworks. O framework ainda está em fase de desenvolvimento, ajudas serão bem-vindas!
+Alpha Framework é um conjunto de soluções CSS que auxiliam desenvolvedores novatos a se habituar com frameworks. O framework ainda está em fase de desenvolvimento, ajudas serão bem-vindas!
 
 Requisitos:
  - NodeJS
