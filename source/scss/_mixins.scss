@@ -1,5 +1,6 @@
-@mixin construct-body($body-bg) {
+@mixin construct-body() {
 	background-color: $body-bg;
+	font-size: 16px;
 
 	@if (lightness($body-bg) < 30) {
   		color: $text-white;
@@ -18,13 +19,26 @@
 
 	@if (lightness($navbar-bg) < 30) {
   		color: $text-white;
+		
+		.icon-bar {
+  			background-color: $text-white;
+  		}
+
 	} @else {
   		color: $text-dark;
+
+		.drawer:hover {
+  				background-color: rgba(0,0,0,0.1);
+  			}
+
+  		.icon-bar {
+  			background-color: $text-dark;
+  		}
 	}
 }
 
 @mixin construct-header($header-bg) {
-	background-color: $header-bg;
+	background: $header-bg;
 
 	@if ($navbar-position == fixed) {
   		padding-top: (42vh-$navbar-height);
@@ -40,10 +54,9 @@
 	}
 }
 
-@mixin construct-section($section-bg, $section-height) {
+@mixin construct-section($section-bg) {
 	background-color: $section-bg;
-	height: $section-height;
-	padding-top: ($section-height/3);
+	padding: 100px 0;
 	display: block;
 
 	@if (lightness($section-bg) < 30) {

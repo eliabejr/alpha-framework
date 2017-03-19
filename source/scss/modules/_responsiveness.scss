@@ -1,0 +1,17 @@
+@media (max-width: $tablet) {
+	html {
+		font-size: 18px;
+	}
+
+	.navbar {
+		font-size: 1.2rem;
+	}
+
+	.drawer {
+		display: block;
+	}
+
+	.nav-menu {
+		display: none;
+	}
+}

@@ -1,12 +1,12 @@
-body {
-    font-family: sans-serif;
-    line-height: 1.5;
-    -webkit-font-smoothing: subpixel-antialiased;
-    font-weight: 400;
-}
-
 span, p {
 	font-size: 1.1rem;
+}
+
+em {
+    background-color: #efefef;
+    letter-spacing: 1px;
+    padding: 5px;
+    border-radius: 3px;
 }
 
 h1 {

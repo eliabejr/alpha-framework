@@ -18,7 +18,11 @@ img {
 
 body {
 	overflow-x: hidden;
-    @include construct-body(#fff);
+    font-family: sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-weight: 400;
+    @include construct-body();
 }
 
 a {
@@ -40,16 +44,26 @@ section {
 }
 
 button {
-	background: transparent;
+	outline: 0;
+	border: 3px;
+	cursor: pointer;
 	font-size: 1rem;
+	background: transparent;
 	transition: all .2s ease-in-out;
-	border: 3px
 }
 
 hr {
-	height: 2px;
+	border: 1px solid currentColor;
 	width: 100%;
 	display: block;
+}
+
+footer {
+	bottom: 0;
+	width: 100%;
+	background: $bg-dark;
+	padding: 10px 0;
+	color: $text-white;
 }
 
 .full {
@@ -86,4 +100,8 @@ hr {
 
 .left {
 	float: left;
+}
+
+.top-buffer {
+	padding-top: 50px;
 }

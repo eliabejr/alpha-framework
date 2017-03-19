@@ -26,6 +26,13 @@
 	padding: 10px;
 }
 
+.no-gutter {
+	padding: 0!important;
+	position: relative;
+	min-height: 1px;
+	float: left;
+}
+
 @for $i from 1 through $total-col {
 	.col-#{$i} {
 		width: percentage($i/$total-col);
@@ -34,11 +41,13 @@
 
 @media (max-width: $mobile) {
 
-	.col-1, .col-2 {
-		width: 50%;
+	.col {
+		padding-left: 0;
+		padding-right: 0;
 	}
-	
-	@for $i from 3 through $total-col {
+
+
+	@for $i from 1 through $total-col {
 		.col-#{$i} {
 			width: 100%;
 		}
@@ -46,12 +55,44 @@
 
 }
 
-@media (min-width: $mobile + 1) and (max-width: $smartphone) {
-	.col-1, .col-2, .col-3, .col-4 {
-		width: 50%;
+
+@media (min-width: $mobile + 1) and (max-width: $tablet) {
+
+	@for $i from 1 through 4 {
+		
+		.col-#{$i} {
+			width: 50%;
+		}
+
+		@if $i = 3 {
+			.col {
+				
+				&:nth-child(2) {
+					padding-right: 0;
+				}
+
+				&:first-child {
+			        padding-left: 0;
+				}
+
+			  	&:last-child {
+			        padding-left: 0;
+			        padding-right: 0;
+			        width: 100%;
+				}
+			}	
+		}
 	}
-	
+
 	@for $i from 5 through $total-col {
+		
+		
+
+		.col-#{$i} {
+	        padding-left: 0;
+	        padding-right: 0;
+		}
+
 		.col-#{$i} {
 			width: 100%;
 		}
@@ -59,7 +100,8 @@
 
 }
 
-@media (min-width: $tablet + 1) {
+
+@media (min-width: $mobile + 1) {
 	.col {
 		&:first-child {
 	        padding-left: 0;

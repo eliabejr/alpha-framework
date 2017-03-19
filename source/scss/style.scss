@@ -3,9 +3,10 @@
 @import "modules/base";
 @import "modules/grid";
 @import "modules/typo";
-@import "modules/buttons";
 @import "modules/navbar";
-@import "modules/animations";
+@import "modules/buttons";
+@import "modules/responsiveness";
+// @import "modules/animations";
 
 header {
 	@include construct-header($gray);
@@ -16,7 +17,9 @@ header {
 }
 
 #get-started {
-	@include construct-section($bg-dark, 200px);
+	@include construct-section($bg-dark);
 }
 
+@include construct-button(red,$red);
+@include construct-button(green,$green);
 @include construct-button(blue,$blue);

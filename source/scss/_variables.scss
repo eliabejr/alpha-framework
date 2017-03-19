@@ -1,7 +1,8 @@
 // COLORS
 
-$blue: #1e90ff;
 $red: #ff2e63;
+$green: #1B8057;
+$blue: #1e90ff;
 $gray: #f7f7f7;
 
 $bg-dark: #252A34;
@@ -14,13 +15,12 @@ $text-white: $bg-white;
 
 $total-col:	12;
 $color-theme: $blue;
-$theme-schema: $bg-white;
+$body-bg: $bg-white;
 $navbar-bg: $bg-dark;
-$navbar-height: 12vh;
+$navbar-height: 15vh;
 $navbar-position:relative;
 
-$mobile: 360px;
-$smartphone: 640px;
+$mobile: 480px;
 $tablet: 960px;
 $notebook: 1200px;
 $desktop: 1201px;
