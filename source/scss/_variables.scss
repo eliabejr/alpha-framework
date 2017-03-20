@@ -21,6 +21,38 @@ $navbar-bg: $bg-dark;
 $navbar-height: 15vh;
 $navbar-position:relative;
 
+
+// GRID LAYOUTS
+
+$landing-page:		"header header header"
+    				"main   main   main"
+   					"footer footer footer"; 
+
+$one-sidebar-right: "header header header"
+    				"main   main   side-right"
+   					"footer footer footer";
+
+$one-sidebar-left: "header header header"
+    				"side-left   main   main"
+   					"footer footer footer";  					
+
+$two-sidebars:		"header header header"
+    				"side-left   main   side-right"
+   					"footer footer footer";
+
+$two-sidebars-right:"header header header"
+    				"main   side-left   side-right"
+   					"footer footer footer";
+
+$two-sidebars-left:"header header header"
+    				"side-left   side-right   main"
+   					"footer footer footer";
+
+$auto-row: auto;
+   					
+
+// BREAKPOINTS
+
 $mobile: 480px;
 $tablet: 960px;
 $notebook: 1200px;

@@ -20,6 +20,26 @@
 	clear: both;
 }
 
+.alpha-header {
+  grid-area: header;
+}
+
+.alpha-main {
+  grid-area: main;
+}
+
+.alpha-side-left {
+  grid-area: side-left;
+}
+
+.alpha-side-right {
+  grid-area: side-right;
+}
+
+.alpha-footer {
+  grid-area: footer;
+}
+
 .col {
   max-width: 100%;
   -webkit-box-flex: 1;

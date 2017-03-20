@@ -38,7 +38,7 @@
 }
 
 @mixin construct-header($header-bg) {
-	background: $header-bg;
+	background-color: $header-bg;
 
 	@if ($navbar-position == fixed) {
   		padding-top: (42vh-$navbar-height);
@@ -81,4 +81,41 @@
 			border-color: $color;
 		}
 	}
+}
+
+@mixin construct-layout($layout-type, $row-layout:20% 60% 20%, $col-gap:10px, $row-gap: 10px) {
+	.grid {
+	  display: grid;
+	  height: 400px;
+	  grid-template-columns: auto;
+	  grid-template-rows: 20% 60% 20%;
+	  grid-column-gap: $col-gap;
+	  grid-row-gap: $row-gap;
+	  grid-template-areas: $layout-type; 
+	}
+
+	@if $layout-type == $landing-page {
+		.alpha-aside {
+			display: none;
+		}
+	}
+
+	@if $layout-type == $two-sidebars {
+		.grid {
+			grid-template-rows: 20% 60% 20%;
+		}
+	}
+
+	@if $layout-type == $two-sidebars-right {
+		.grid {
+			grid-template-rows: 60% 20% 20%;
+		}
+	}
+
+	@if $layout-type == $two-sidebars-left {
+		.grid {
+			grid-template-rows: 20% 20% 60%;
+		}
+	}
+
 }
