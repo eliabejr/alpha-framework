@@ -10,7 +10,8 @@
 }
 
 .row {
-	margin: 20px 0;
+	display: flex;
+	margin: 10px 0;
 }
 
 .row:after {
@@ -20,95 +21,40 @@
 }
 
 .col {
-	position: relative;
-	min-height: 1px;
-	float: left;
-	padding: 10px;
+  max-width: 100%;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -webkit-flex-basis: 0;
+      -ms-flex-preferred-size: 0;
+      -ms-flex-positive: 1;
+          flex-basis: 0;
+          flex-grow: 1;
 }
 
-.no-gutter {
-	padding: 0!important;
-	position: relative;
-	min-height: 1px;
-	float: left;
+.gutter {
+	margin-left: 10px;
+	margin-right: 10px;
+
+	&:first-child {
+		margin-left: 0;
+	}
+
+	&:last-child {
+		margin-right: 0;
+	}
 }
 
 @for $i from 1 through $total-col {
 	.col-#{$i} {
-		width: percentage($i/$total-col);
-	}
-}
+  		width: 100%;
+  		padding: 10px 0;
 
-@media (max-width: $mobile) {
+  		&:first-child {
+  			padding-left: 0;
+  		}
 
-	.col {
-		padding-left: 0;
-		padding-right: 0;
-	}
-
-
-	@for $i from 1 through $total-col {
-		.col-#{$i} {
-			width: 100%;
-		}
-	}
-
-}
-
-
-@media (min-width: $mobile + 1) and (max-width: $tablet) {
-
-	@for $i from 1 through 4 {
-		
-		.col-#{$i} {
-			width: 50%;
-		}
-
-		@if $i = 3 {
-			.col {
-				
-				&:nth-child(2) {
-					padding-right: 0;
-				}
-
-				&:first-child {
-			        padding-left: 0;
-				}
-
-			  	&:last-child {
-			        padding-left: 0;
-			        padding-right: 0;
-			        width: 100%;
-				}
-			}	
-		}
-	}
-
-	@for $i from 5 through $total-col {
-		
-		
-
-		.col-#{$i} {
-	        padding-left: 0;
-	        padding-right: 0;
-		}
-
-		.col-#{$i} {
-			width: 100%;
-		}
-	}
-
-}
-
-
-@media (min-width: $mobile + 1) {
-	.col {
-		&:first-child {
-	        padding-left: 0;
-		}
-
-	  	&:last-child {
-	        padding-right: 0;
-		}
+  		&:last-child {
+  			padding-right: 0;
+  		}
 	}
 }
