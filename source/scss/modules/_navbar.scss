@@ -1,0 +1,62 @@
+.navbar {
+	top: 0;
+	z-index: 10;
+}
+
+.navbar li, .nav-menu ul {
+	display: inline;
+}
+
+.nav-menu {
+	font-family: sans-serif;
+	display: inline;
+}
+
+.nav-menu a {
+	text-decoration: none;
+	transition:all .2s ease-in-out;
+	padding: 10px 20px;
+
+	&:hover {
+		background: rgba(255,255,255,0.1);
+	}
+
+}
+
+.brand {
+	font-size: 2em;
+	font-weight: 600;
+	display: inline;
+}
+
+.drawer {
+	width: $navbar-height;
+    height: $navbar-height;
+    background-image: none;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    display: inline-block;
+    -webkit-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out;
+    -webkit-tap-highlight-color: transparent;
+    display: none;
+
+    & .icon-bar {
+    	background-color: #fff;
+	    display: block;
+	    width: 40px;
+	    height: 5px;
+	    margin-top: 6px;
+	    margin-left: auto;
+		margin-right: auto;
+
+		&:first-child {
+			margin-top: 0;
+		}
+    }
+
+    &:hover, &:active {
+    	background: rgba(255,255,255,0.1);
+    }
+}
