@@ -37,8 +37,9 @@
 	}
 }
 
-@mixin construct-header($header-bg) {
+@mixin construct-header($header-bg, $header-height:100vh) {
 	background-color: $header-bg;
+	height: $header-height;
 
 	@if ($navbar-position == fixed) {
   		padding-top: (42vh-$navbar-height);

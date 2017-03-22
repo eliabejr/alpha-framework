@@ -1,0 +1,126 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Alpha Framework
+    link(rel='stylesheet', href='css/style.css')
+    link(rel='icon', href='img/alpha.ico', type='image/x-icon')
+    meta(name='viewport', content='width=device-width; initial-scale = 1.0; \
+    maximum-scale=1.0; user-scalable=no')
+  body
+    nav.navbar
+      .container
+        .brand Alpha
+        .nav-menu.right
+          ul
+            li
+              a(href='') Home
+            li
+              a(href='#why') About
+            li
+              a(href='#examples') Examples
+            li
+              a(href='') Contact
+        button.drawer.right
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+    header.text-center
+      .container.uppercase
+        h1.animate.fadeIn Do Simple,
+        h3.animate.fadeIn.delay Do Better.
+        a(href='#get-started')
+          button.btn.btn-blue.waves-effect.waves-light.center-block GET STARTED
+    section#why
+      .container
+        .row.middle
+          .col-4.center-block
+            img.img-center-resize(src='img/alpha-icon.png', alt='Alpha')
+          .col-8
+            div
+              h2 Why Alpha?
+              p.text-justify
+                | Every time that we start a new project, we have to decide which framework to use or begin a new stylesheet, sometimes the 
+                b simple
+                |  it's the best. 
+                b Alpha
+                |  it's a simple framework CSS to build big things.
+    section#get-started.text-center
+      .container
+        h2 We love the simple things.
+    section#examples
+      .container
+        h2.text-center Examples
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error excepturi pariatur illo eligendi doloribus neque, dolorum, itaque, rerum libero atque quod nobis labore totam id sequi odit alias repudiandae.
+        h3 Summary:
+        ol
+          a(href='#grids')
+            li Grids
+          a(href='#buttons')
+            li Buttons
+          a(href='#layouts')
+            li Layouts
+        h3#grid.top-buffer Flex Grid System
+        p
+          | The grids works on 12 column-based system, you can change at any time on 
+          em source/scss/_variables.scss
+          | . We've used Sass, the file with grid settings it's at 
+          em source/scss/modules/_grids.scss
+          | .
+        .row
+          .col-4
+            .item.text-center
+              p .col-4
+          .col-4
+            .item.text-center
+              p .col-4
+          .col-4
+            .item.text-center
+              p .col-4
+        .row
+          .col-6
+            .item.text-center
+              p .col-6
+          .col-6
+            .item.text-center
+              p .col-6
+        .row
+          .col-12
+            .item.text-center
+              p .col-12
+        h3#buttons.top-buffer Buttons
+        p
+          | In Alpha, you can make infinite buttons with this line on style.css: 
+          em @include construct-button(COLOR,$COLOR);
+          | .
+        p
+          | Currently, we have 3 basic colors: red, green, blue. You can make/modify your own button any time.
+        br
+        .row
+          .col-6
+            h4 Squared
+            button.btn.btn-red.text-center Click Me
+            button.btn.btn-green.text-center Click Me
+            button.btn.btn-blue.text-center Click Me
+            button.btn.btn-orange.text-center Click Me
+          .col-6
+            h4 Rounded
+            button.btn.btn-red.text-center.rounded Click Me
+            button.btn.btn-green.text-center.rounded Click Me
+            button.btn.btn-blue.text-center.rounded Click Me
+            button.btn.btn-orange.text-center.rounded Click Me
+        h3#layouts.top-buffer CSS Grid Layout
+        p
+          | Alpha v1 have support to new technologies in front-end, like 
+          a(href='https://www.w3.org/TR/css3-grid-layout/', target='_blank') CSS Grid Layouts
+          | , to make a new layout you only need type in style.css the following command: 
+          em @include construct-layout($LAYOUT-TYPE, $ROW-LAYOUT, $COL-GAP, $ROW-GAP);
+        .grid
+          .item.alpha-header Header
+          .item.alpha-aside-left Aside
+          .item.alpha-main Main
+          .item.alpha-aside-right Aside
+          .item.alpha-footer Footer
+    footer.text-center
+      | Built with love.
