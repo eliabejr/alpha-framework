@@ -39,12 +39,12 @@
 
 @mixin construct-header($header-bg, $header-height:100vh) {
 	background-color: $header-bg;
-	height: $header-height;
 
 	@if ($navbar-position == fixed) {
   		padding-top: (42vh-$navbar-height);
 		margin-top: $navbar-height;	
 	} @else {
+		height: ($header-height)-($navbar-height);
   		padding-top: (42vh-$navbar-height);
 	}
 
@@ -117,6 +117,12 @@
 		.grid {
 			grid-template-rows: 20% 20% 60%;
 		}
+	}
+
+	@supports not (display: grid) {
+	    .grid {
+	      display: none!important;
+	    }
 	}
 
 }

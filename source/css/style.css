@@ -875,7 +875,7 @@ body {
 
 header {
   background-color: #252A34;
-  height: 100vh;
+  height: 85vh;
   padding-top: 27vh;
   color: #f9f9f9;
   background-image: url(../img/bg-header.jpg);
@@ -913,14 +913,14 @@ header {
   background-size: cover; }
 
 .btn-red {
-  color: #ff2e63;
-  border-color: #ff2e63; }
+  color: tomato;
+  border-color: tomato; }
   .btn-red a {
     color: inherit; }
   .btn-red:hover {
     color: white;
-    background: #ff2e63;
-    border-color: #ff2e63; }
+    background: tomato;
+    border-color: tomato; }
 
 .btn-green {
   color: #1B8057;
@@ -963,3 +963,7 @@ header {
 
 .grid {
   grid-template-rows: 20% 60% 20%; }
+
+@supports not (display: grid) {
+  .grid {
+    display: none !important; } }

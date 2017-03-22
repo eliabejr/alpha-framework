@@ -1,14 +1,13 @@
 const gulp          = require("gulp");
+const jade          = require('gulp-jade');
 const sass          = require("gulp-sass");
 const notify        = require("gulp-notify");
 const cssmin        = require("gulp-clean-css");
 const imageop       = require('gulp-image-optimization');
-const jade          = require('gulp-jade');
-
 
 
 gulp.task('compile-html', function(){
-  gulp.src('source/templates/**/*.jade')
+  gulp.src('source/jade/templates/**/*.jade')
     .pipe(jade())
     .on("error", notify.onError({title:"Erro at compile HTML", message:"<%= error.message %>"}))
     .pipe(gulp.dest('build'));
