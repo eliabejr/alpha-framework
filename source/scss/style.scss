@@ -1,6 +1,6 @@
 @import "variables";
+@import "base";
 @import "mixins";
-@import "modules/base";
 @import "modules/grid";
 @import "modules/typo";
 @import "modules/navbar";
@@ -10,7 +10,7 @@
 
 header {
 	@include construct-header($bg-dark,100vh);
-    background-image: url(../../source/img/bg-header.jpeg);
+    background-image: url(../img/bg-header.jpg);
     box-shadow: inset 0 0 20px 0 rgba(0,0,0,0.3);
     background-blend-mode: soft-light;
     background-attachment: fixed;
@@ -29,7 +29,7 @@ header {
 
 #get-started {
 	@include construct-section($bg-dark);
-	background-image: url(../../source/img/bg-home.jpg);
+	background-image: url(../img/bg-home.jpg);
     box-shadow: inset 0 0 20px 0 rgba(0,0,0,0.3);
     background-blend-mode: soft-light;
     background-attachment: fixed;
