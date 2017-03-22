@@ -39,7 +39,7 @@ gulp.task('optimize-images', function(cb) {
 
 
 gulp.task('watch', function() {
-    gulp.watch('source/templates/**/*', ['compile-html']);
+    gulp.watch('source/jade/**/*',      ['compile-html']);
     gulp.watch('source/scss/**/*',      ['compile-sass']);
     gulp.watch('source/css/style.css',  ['minify-css']);
     gulp.watch('source/img/**/*',       ['optimize-images']);

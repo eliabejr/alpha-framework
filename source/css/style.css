@@ -343,7 +343,7 @@ h3 {
   animation-fill-mode: both; }
 
 .delay {
-  animation-delay: 1s; }
+  animation-delay: .5s; }
 
 @-webkit-keyframes toBlack {
   from {
