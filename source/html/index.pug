@@ -1,0 +1,67 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Alpha Framework
+    link(rel='stylesheet', href='css/style.css')
+    link(rel='icon', href='img/alpha.ico', type='image/x-icon')
+    meta(name='viewport', content='width=device-width; initial-scale = 1.0; \
+    maximum-scale=1.0; user-scalable=no')
+  body
+    nav.navbar
+      .container
+        .brand Alpha
+        .nav-menu.right
+          ul
+            li
+              a(href='') Home
+            li
+              a(href='#why') About
+            li
+              a(href='#examples') Examples
+            li
+              a(href='') Contact
+        button.drawer.right
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+    header.text-center
+      .container.uppercase
+        h1.animate.fadeIn Do Simple,
+        h3.animate.fadeIn.delay Do Better.
+        a(href='#get-started')
+          button.btn.btn-blue.waves-effect.waves-light.center-block GET STARTED
+    section#why
+      .container
+        .row.middle
+          .col-4.center-block
+            img.img-center-resize(src='img/alpha-icon.png', alt='Alpha')
+          .col-8
+            div
+              h2 Why Alpha?
+              p.text-justify
+                | Every time that we start a new project, we have to decide which framework to use or begin a new stylesheet, sometimes the 
+                b simple
+                |  it's the best. 
+                b Alpha
+                |  it's a simple framework CSS to build big things.
+    section#get-started.text-center
+      .container
+        h2 We love the simple things.
+    section#features
+      .container
+        .row
+          .col-4.text-center
+              picture.center-block
+                img(src='img/faster.svg', alt='Faster Icon', title='Easy!!')
+              h3 Easy to use
+          .col-4.text-center
+              picture.center-block
+                img(src='img/customizable.svg', alt='Customizable Icon', title='Easily Customizable!!')
+              h3 Customizable
+          .col-4.text-center
+              picture.center-block
+                img(src='img/flexible.svg', alt='Flexible Icon', title='Made for all screens')
+              h3 Flexible
+    footer.text-center
+      | Built with love.

@@ -1,5 +1,5 @@
 const gulp          = require("gulp");
-const jade          = require('gulp-jade');
+const pug           = require('gulp-pug');
 const sass          = require("gulp-sass");
 const notify        = require("gulp-notify");
 const cssmin        = require("gulp-clean-css");
@@ -7,8 +7,8 @@ const imageop       = require('gulp-image-optimization');
 
 
 gulp.task('compile-html', function(){
-  gulp.src('source/jade/templates/**/*.jade')
-    .pipe(jade())
+  gulp.src('source/html/*.pug')
+    .pipe(pug())
     .on("error", notify.onError({title:"Erro at compile HTML", message:"<%= error.message %>"}))
     .pipe(gulp.dest('build'));
   });
