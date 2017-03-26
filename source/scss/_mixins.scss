@@ -27,7 +27,8 @@
 	} @else {
   		color: $text-dark;
 
-		.drawer:hover {
+		.drawer:hover,
+		.nav-menu li:hover {
   				background-color: rgba(0,0,0,0.1);
   			}
 

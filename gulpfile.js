@@ -14,10 +14,16 @@ gulp.task('compile-html', function(){
   });
 
 gulp.task('compile-sass', function () {
-	return gulp.src("source/scss/**/*")
+	return gulp.src("source/scss/style.scss")
 			.pipe(sass())
 			.on("error", notify.onError({title:"Error at compile CSS", message:"<%= error.message %>"}))
 			.pipe(gulp.dest("source/css"))
+});
+
+gulp.task('copy-fonts', function() {
+    return gulp.src("source/scss/modules/font-awesome/fonts/*")
+        .on("error", notify.onError({title:"Error at Copy Fonts", message:"<%= error.message %>"}))
+        .pipe(gulp.dest("build/css/fonts"));
 });
 
 gulp.task('minify-css', function(){
@@ -45,4 +51,4 @@ gulp.task('watch', function() {
     gulp.watch('source/img/**/*',       ['optimize-images']);
 });
 
-gulp.task('default',['compile-html','compile-sass','minify-css','optimize-images','watch']);
+gulp.task('default',['compile-html','compile-sass','copy-fonts','minify-css','optimize-images','watch']);
