@@ -75,7 +75,7 @@ html(lang='en')
         h3#buttons.top-buffer Buttons
         p
           | In Alpha, you can make infinite buttons with this line on style.css: 
-          em @include construct-button(COLOR,$COLOR);
+          em @include make-button(COLOR,$COLOR);
           | .
         p
           | Currently, we have 3 basic colors: red, green, blue. You can make/modify your own button any time.
@@ -83,10 +83,10 @@ html(lang='en')
         .row
           .col-6
             h4 Squared
-            button.btn.btn-red.text-center Click Me
-            button.btn.btn-green.text-center Click Me
-            button.btn.btn-blue.text-center Click Me
-            button.btn.btn-orange.text-center Click Me
+            button.btn.btn-red Click Me
+            button.btn.btn-green Click Me
+            button.btn.btn-blue Click Me
+            button.btn.btn-orange Click Me
           .col-6
             h4 Rounded
             button.btn.btn-red.text-center.rounded Click Me
@@ -98,7 +98,7 @@ html(lang='en')
           | Alpha v1 have support to new technologies in front-end, like 
           a(href='https://www.w3.org/TR/css3-grid-layout/', target='_blank') CSS Grid Layouts
           | , to make a new layout you only need type in style.css the following command: 
-          em @include construct-layout($LAYOUT-TYPE, $ROW-LAYOUT, $COL-GAP, $ROW-GAP);
+          em @include make-layout($LAYOUT-TYPE, $ROW-LAYOUT, $COL-GAP, $ROW-GAP);
         .grid
           .item.alpha-header Header
           .item.alpha-aside-left Aside

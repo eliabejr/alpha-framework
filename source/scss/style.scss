@@ -10,11 +10,11 @@
 @import "modules/font-awesome/style";
 
 body {
-    @include construct-body();
+    @include make-body();
 }
 
 header {
-	@include construct-header($bg-dark);
+	@include make-header($bg-dark);
     background-image: url(../img/bg-header.jpg);
     box-shadow: inset 0 0 20px 0 rgba(0,0,0,0.3);
     background-blend-mode: soft-light;
@@ -29,11 +29,15 @@ header {
 }
 
 .navbar {
-	@include construct-navbar($bg-dark);
+	@include make-navbar($bg-dark);
+}
+
+#why {
+    @include make-section($gray);
 }
 
 #get-started {
-	@include construct-section($bg-dark);
+	@include make-section($bg-dark);
 	background-image: url(../img/bg-home.jpg);
     box-shadow: inset 0 0 20px 0 rgba(0,0,0,0.3);
     background-blend-mode: soft-light;
@@ -41,11 +45,31 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    margin-bottom: 0;
 }
 
-@include construct-button(red,$red);
-@include construct-button(green,$green);
-@include construct-button(blue,$blue);
-@include construct-button(orange,$orange);
+@include make-button(red,$red);
+@include make-button(green,$green);
+@include make-button(blue,$blue);
+@include make-button(orange,$orange);
+@include make-button(white,$white);
 
-@include construct-layout($two-sidebars);
+@include make-layout($two-sidebars);
+
+#credits span {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,.8);
+    text-shadow: 0 1px 0 rgba(0,0,0,0.4);
+
+    &:first-child:before,
+    &:last-child:after {
+        content: "";
+    }
+
+
+    &:after {
+        content: " -";
+        font-size: 0.7rem;
+        vertical-align: text-bottom;
+    }
+}

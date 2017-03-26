@@ -1,4 +1,4 @@
-@mixin construct-body() {
+@mixin make-body() {
 	background-color: $body-bg;
 	font-size: 16px;
 
@@ -9,7 +9,7 @@
 	}
 }
 
-@mixin construct-navbar($navbar-bg) {
+@mixin make-navbar($navbar-bg) {
 	width: 100%;
 	display: block;
 	height: $navbar-height;
@@ -38,7 +38,7 @@
 	}
 }
 
-@mixin construct-header($header-bg, $header-height:100vh) {
+@mixin make-header($header-bg, $header-height:100vh) {
 	background-color: $header-bg;
 
 	@if ($navbar-position == fixed) {
@@ -56,7 +56,23 @@
 	}
 }
 
-@mixin construct-section($section-bg) {
+@mixin make-bg($name, $color) {
+	.bg-#{$name} {
+		background-color: $color;
+
+		& a {
+			color: inherit;
+		}
+	}
+
+	@if (lightness($color) < 30) {
+  		color: $text-white;
+	} @else {
+  		color: $text-dark;
+	}
+}
+
+@mixin make-section($section-bg) {
 	background-color: $section-bg;
 	padding: 100px 0;
 	display: block;
@@ -68,7 +84,7 @@
 	}
 }
 
-@mixin construct-button($name, $color) {
+@mixin make-button($name, $color) {
 	.btn-#{$name} {
 		color: $color;
 		border-color: $color;
@@ -83,9 +99,17 @@
 			border-color: $color;
 		}
 	}
+
+	@if $name == white {
+		.btn-white {
+			&:hover {
+				color: $bg-dark;
+			}
+		}		
+	}
 }
 
-@mixin construct-layout($layout-type, $row-layout:20% 60% 20%, $col-gap:10px, $row-gap: 10px) {
+@mixin make-layout($layout-type, $row-layout:20% 60% 20%, $col-gap:10px, $row-gap: 10px) {
 	.grid {
 	  display: grid;
 	  height: 400px;

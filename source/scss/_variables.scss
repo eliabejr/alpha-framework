@@ -1,10 +1,18 @@
 // COLORS
+// ---------------------
 
-$red: tomato;
+$red: #e74c3c;
 $blue: #1e90ff;
 $gray: #f7f7f7;
 $green: #1D9F75;
-$orange: #FFB563;
+$orange: #e67e22;
+$emerald: #2ecc71;
+$yellow: #f1c40f;
+$amethyst: #9b59b6;
+$tomato: tomato;
+$indigo: #3F51B5;
+$light-green: #4CAF50;
+$white: #ecf0f1;
 
 $bg-dark: #252A34;
 $bg-white: #f9f9f9;
@@ -13,6 +21,7 @@ $text-white: $bg-white;
 
 
 // SETTINGS
+// ---------------------
 
 $total-col:	12;
 $color-theme: $blue;
@@ -22,6 +31,7 @@ $navbar-position:relative;
 
 
 // GRID LAYOUTS
+// ---------------------
 
 $landing-page:		"header header header"
     				"main   main   main"
@@ -51,6 +61,7 @@ $auto-row: auto;
    					
 
 // BREAKPOINTS
+// ---------------------
 
 $mobile: 480px;
 $tablet: 960px;
