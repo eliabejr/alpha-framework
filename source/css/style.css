@@ -308,12 +308,16 @@ h3 {
   top: 0;
   z-index: 10; }
 
-.navbar li, .nav-menu ul {
-  display: inline; }
+.navbar li,
+.nav-menu ul,
+.drawer-menu ul {
+  display: inline;
+  list-style: none; }
 
 .nav-menu {
   font-family: sans-serif;
-  display: inline; }
+  display: inline;
+  transition: all .2s ease-in-out; }
 
 .nav-menu li {
   text-decoration: none;
@@ -330,6 +334,8 @@ h3 {
 .drawer {
   width: 15vh;
   height: 15vh;
+  margin-left: -6vw;
+  margin-right: 3vw;
   background-image: none;
   background-color: transparent;
   border: none;
@@ -338,7 +344,8 @@ h3 {
   -webkit-transition: background-color 0.2s ease-out;
   transition: background-color 0.2s ease-out;
   -webkit-tap-highlight-color: transparent;
-  display: none; }
+  display: none;
+  z-index: 10; }
   .drawer .icon-bar {
     background-color: #fff;
     display: block;
@@ -351,6 +358,30 @@ h3 {
       margin-top: 0; }
   .drawer:hover, .drawer:active {
     background: rgba(255, 255, 255, 0.1); }
+
+.drawer-menu {
+  display: none;
+  transition: all .3s ease-in-out;
+  background: #1b1f27;
+  box-shadow: 2px -30px 38px -1px rgba(0, 0, 0, 0.4);
+  height: 100vh;
+  padding-top: 16vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 60vw;
+  z-index: 9; }
+  .drawer-menu li {
+    padding: 20px; }
+    .drawer-menu li:hover {
+      background: rgba(255, 255, 255, 0.1); }
+
+.hide-drawer {
+  width: 0vw !important;
+  left: -35vw; }
+
+.overlay {
+  overflow: hidden; }
 
 .btn {
   border: 2px solid currentColor;
@@ -805,7 +836,7 @@ button > i {
     margin: 0 auto;
     display: block; }
   .drawer {
-    margin-right: -7.5vw; } }
+    margin-left: -7vw; } }
 
 @media (max-width: 960px) {
   html {
@@ -813,12 +844,14 @@ button > i {
   .img-responsive {
     margin-left: auto;
     margin-right: auto; }
-  .navbar {
-    font-size: 1.2rem; }
-  .drawer {
-    display: block; }
   .nav-menu {
     display: none; }
+  .drawer,
+  .drawer-menu ul,
+  .drawer-menu li {
+    display: block; }
+  .drawer-menu {
+    display: block; }
   .img-center-resize {
     width: 50%;
     vertical-align: middle;
@@ -3273,8 +3306,25 @@ header {
   .navbar .icon-bar {
     background-color: #f9f9f9; }
 
-#why {
+#why, #examples {
   background-color: #f7f7f7;
+  padding: 100px 0;
+  display: block;
+  color: #252A34; }
+
+#credits span {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4); }
+  #credits span:first-child:before, #credits span:last-child:after {
+    content: ""; }
+  #credits span:after {
+    content: " -";
+    font-size: 0.7rem;
+    vertical-align: text-bottom; }
+
+#features {
+  background-color: #ecf0f1;
   padding: 100px 0;
   display: block;
   color: #252A34; }
@@ -3292,6 +3342,16 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 0; }
+
+.btn-default {
+  color: #1e90ff;
+  border-color: #1e90ff; }
+  .btn-default a {
+    color: inherit; }
+  .btn-default:hover {
+    color: white;
+    background: #1e90ff;
+    border-color: #1e90ff; }
 
 .btn-red {
   color: #e74c3c;
@@ -3334,14 +3394,14 @@ header {
     border-color: #e67e22; }
 
 .btn-white {
-  color: #ecf0f1;
-  border-color: #ecf0f1; }
+  color: #f7f7f7;
+  border-color: #f7f7f7; }
   .btn-white a {
     color: inherit; }
   .btn-white:hover {
     color: white;
-    background: #ecf0f1;
-    border-color: #ecf0f1; }
+    background: #f7f7f7;
+    border-color: #f7f7f7; }
 
 .btn-white:hover {
   color: #252A34; }
@@ -3361,14 +3421,3 @@ header {
 @supports not (display: grid) {
   .grid {
     display: none !important; } }
-
-#credits span {
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.8);
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4); }
-  #credits span:first-child:before, #credits span:last-child:after {
-    content: ""; }
-  #credits span:after {
-    content: " -";
-    font-size: 0.7rem;
-    vertical-align: text-bottom; }

@@ -43,6 +43,11 @@ gulp.task("optimize-images", function(cb) {
     .pipe(gulp.dest("build/img")).on("end", cb).on("error", cb);
 });
 
+gulp.task("compile-js", function() {
+    gulp.src("source/js/*")
+        .on("error", notify.onError({title:"Error at Compile Javascript", message:"<%= error.message %>"}))
+        .pipe(gulp.dest("build/js"));
+});
 
 gulp.task("watch", function() {
     gulp.watch("source/html/**/*",      ["compile-html"]);
@@ -50,6 +55,7 @@ gulp.task("watch", function() {
     gulp.watch("source/fonts/*",        ["copy-fonts"]);
     gulp.watch("source/css/style.css",  ["minify-css"]);
     gulp.watch("source/img/**/*",       ["optimize-images"]);
+    gulp.watch("source/js/*",           ["compile-js"]);
 });
 
-gulp.task("default",["compile-html","compile-sass","copy-fonts","minify-css","optimize-images","watch"]);
+gulp.task("default",["compile-html","compile-sass","copy-fonts","minify-css","optimize-images","compile-js","watch"]);

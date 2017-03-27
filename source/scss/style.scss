@@ -32,29 +32,13 @@ header {
 	@include make-navbar($bg-dark);
 }
 
-#why {
-    @include make-section($gray);
+// SECTIONS
+// -------------------------------
+
+
+#why, #examples {
+    @include make-section($white);
 }
-
-#get-started {
-	@include make-section($bg-dark);
-	background-image: url(../img/bg-home.jpg);
-    box-shadow: inset 0 0 20px 0 rgba(0,0,0,0.3);
-    background-blend-mode: soft-light;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-bottom: 0;
-}
-
-@include make-button(red,$red);
-@include make-button(green,$green);
-@include make-button(blue,$blue);
-@include make-button(orange,$orange);
-@include make-button(white,$white);
-
-@include make-layout($two-sidebars);
 
 #credits span {
     font-size: 0.9rem;
@@ -73,3 +57,32 @@ header {
         vertical-align: text-bottom;
     }
 }
+
+#features {
+    @include make-section($gray);
+}
+
+#get-started {
+	@include make-section($bg-dark);
+	background-image: url(../img/bg-home.jpg);
+    box-shadow: inset 0 0 20px 0 rgba(0,0,0,0.3);
+    background-blend-mode: soft-light;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 0;
+}
+
+
+// BUTTONS
+// ----------------------
+
+@include make-button(default,$color-theme);
+@include make-button(red,$red);
+@include make-button(green,$green);
+@include make-button(blue,$blue);
+@include make-button(orange,$orange);
+@include make-button(white,$white);
+
+@include make-layout($two-sidebars);

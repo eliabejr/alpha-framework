@@ -12,8 +12,8 @@
 	}
 
 	.drawer {
-	    margin-right: -7.5vw;
-	}
+    	margin-left: -7vw;
+    }
 
 }
 
@@ -27,16 +27,18 @@
 		margin-right: auto;
 	}
 
-	.navbar {
-		font-size: 1.2rem;
+	.nav-menu {
+		display: none;
 	}
 
-	.drawer {
+	.drawer,
+	.drawer-menu ul,
+	.drawer-menu li {
 		display: block;
 	}
 
-	.nav-menu {
-		display: none;
+	.drawer-menu {
+	    display: block;
 	}
 
 	.img-center-resize {
@@ -49,6 +51,8 @@
 	.row {
 	    flex-flow: column;
 	}
+
+
 
 }
 

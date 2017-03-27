@@ -10,6 +10,10 @@ html(lang='en')
   body
     nav.navbar
       .container
+        button.drawer.left
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
         .brand Alpha
         .nav-menu.right
           ul
@@ -21,16 +25,16 @@ html(lang='en')
               a(href='#examples') Examples
             li
               a(href='') Contact
-        button.drawer.right
-          span.icon-bar
-          span.icon-bar
-          span.icon-bar
-    header.text-center
-      .container.uppercase
-        h1.animate.fadeIn Do Simple,
-        h3.animate.fadeIn.delay Do Better.
-        a(href='#get-started')
-          button.btn.btn-blue.waves-effect.waves-light.center-block GET STARTED
+    .drawer-menu.hide-drawer
+      ul
+        li
+          a(href='') Home
+        li
+          a(href='#why') About
+        li
+          a(href='/examples.html') Examples
+        li
+          a(href='') Contact
     section#examples
       .container
         h2.text-center Examples
@@ -106,4 +110,6 @@ html(lang='en')
           .item.alpha-aside-right Aside
           .item.alpha-footer Footer
     footer.text-center
-      | Built with love.
+      | Built with <i class="alpha alpha-heart red"></i>
+  script(src='js/jquery.js')
+  script(src='js/alpha.js')

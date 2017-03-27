@@ -10,6 +10,10 @@ html(lang='en')
   body
     nav.navbar
       .container
+        button.drawer.left
+          span.icon-bar#bar1
+          span.icon-bar#bar2
+          span.icon-bar#bar3
         .brand Alpha
         .nav-menu.right
           ul
@@ -18,19 +22,25 @@ html(lang='en')
             li
               a(href='#why') About
             li
-              a(href='/examples.html') Examples
+              a(href='examples.html') Examples
             li
               a(href='') Contact
-        button.drawer.right
-          span.icon-bar
-          span.icon-bar
-          span.icon-bar
+    .drawer-menu.hide-drawer
+      ul
+        li
+          a(href='') Home
+        li
+          a(href='#why') About
+        li
+          a(href='/examples.html') Examples
+        li
+          a(href='') Contact
     header.text-center
       .container.uppercase
         h1.animate.fadeIn Do Simple,
         h3.animate.fadeIn.delay Do Better.
         a(href='#get-started')
-          button.btn.btn-blue.center-block GET STARTED
+          button.btn.btn-default.center-block GET STARTED
     section#why
       .container
         .row.middle
@@ -53,12 +63,19 @@ html(lang='en')
           .col-4.text-center
               i.alpha.alpha-heart.alpha-5x(aria-hidden='true', title='Easy to use!')
               h3 Easy to use
+              p.text-center
+                | Build web pages with few commands. Great for beginners, Alpha is a great way to learn SASS, NodeJS and new ways to program javascript, like PugJS.
           .col-4.text-center
               i.alpha.alpha-edit.alpha-5x(aria-hidden='true', title='Easily Customizable!')
               h3 Customizable
+              p.text-center
+                | The variables are centralized in a single file, allowing faster changes. We cherish by code reuse, we comment all the functions for a good learning curve.
           .col-4.text-center
               i.alpha.alpha-object-ungroup.alpha-5x(aria-hidden='true', title='Made for all Screens!')
               h3 Flexible
+              p.text-center
+                | Responsive sites are the present and the future, learn with us with the best way, coding! Interested in helping us? 
+                a(href='https://github.com/EliabeJr/alpha-framework/issues') See how
 
     section#get-started.text-center
       .container
@@ -74,10 +91,12 @@ html(lang='en')
             | Created by 
           span 
             a(href='https://github.com/eliabejr') Eliabe Júnior
-        a(href='#')
+        a(href='https://github.com/EliabeJr/alpha-framework/archive/master.zip')
           button.btn.btn-lg.btn-white
             i.alpha.alpha-download
             | Download
 
     footer.text-center
       | Built with <i class="alpha alpha-heart red"></i>
+  script(src='js/jquery.js')
+  script(src='js/alpha.js')
