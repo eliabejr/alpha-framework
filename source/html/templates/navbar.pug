@@ -1,17 +1,27 @@
 nav.navbar
-      .container
-        .brand Alpha
-        .nav-menu.right
-          ul
-            li
-              a(href='') Home
-            li
-              a(href='#why') About
-            li
-              a(href='#examples') Examples
-            li
-              a(href='') Contact
-        button.drawer.right
-          span.icon-bar
-          span.icon-bar
-          span.icon-bar
+  .container
+      button.drawer.left
+        span.icon-bar#bar1
+        span.icon-bar#bar2
+        span.icon-bar#bar3
+      .brand Alpha
+      .nav-menu.right
+        ul
+          li
+            a(href='') Home
+          li
+            a(href='#why') About
+          li
+            a(href='examples.html') Examples
+          li
+            a(href='') Contact
+.drawer-menu.hide-drawer
+  ul
+    li
+      a(href='') Home
+    li
+      a(href='#why') About
+    li
+      a(href='/examples.html') Examples
+    li
+      a(href='') Contact

@@ -8,33 +8,7 @@ html(lang='en')
     meta(name='viewport', content='width=device-width; initial-scale = 1.0; \
     maximum-scale=1.0; user-scalable=no')
   body
-    nav.navbar
-      .container
-        button.drawer.left
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-        .brand Alpha
-        .nav-menu.right
-          ul
-            li
-              a(href='') Home
-            li
-              a(href='#why') About
-            li
-              a(href='#examples') Examples
-            li
-              a(href='') Contact
-    .drawer-menu.hide-drawer
-      ul
-        li
-          a(href='') Home
-        li
-          a(href='#why') About
-        li
-          a(href='/examples.html') Examples
-        li
-          a(href='') Contact
+    include templates/navbar.pug
     section#examples
       .container
         h2.text-center Examples
@@ -109,7 +83,4 @@ html(lang='en')
           .item.alpha-main Main
           .item.alpha-aside-right Aside
           .item.alpha-footer Footer
-    footer.text-center
-      | Built with <i class="alpha alpha-heart red"></i>
-  script(src='js/jquery.js')
-  script(src='js/alpha.js')
+  include templates/footer.pug
