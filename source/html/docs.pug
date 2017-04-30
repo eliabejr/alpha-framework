@@ -1,0 +1,26 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Docs | Alpha Framework
+    link(rel='stylesheet', href='css/style.css')
+    link(rel='icon', href='img/alpha.ico', type='image/x-icon')
+    meta(name='viewport', content='width=device-width; initial-scale = 1.0; \
+    maximum-scale=1.0; user-scalable=no')
+  body
+    include templates/navbar.pug
+    #header-getting-started.text-center
+      h1 Documentation
+    .container
+      .row
+        .col-4
+          aside Components
+        .col-8
+          main#body-documentation
+            ol
+              li#1 Installing Alpha
+                p.text-center 
+              li#2 Using Alpha
+              li#3 Variabless
+
+  include templates/footer.pug
