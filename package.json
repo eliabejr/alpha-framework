@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/EliabeJr/alpha-framework#readme",
   "devDependencies": {
+    "browser-sync": "^2.18.8",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^2.3.2",
     "gulp-image-optimization": "^0.1.3",

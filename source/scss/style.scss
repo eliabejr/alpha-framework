@@ -10,7 +10,7 @@
 @import "modules/font-awesome/style";
 
 body {
-    @include make-body();
+    @include make-body($bg-white, 16px);
 }
 
 header {
@@ -58,7 +58,7 @@ header {
     }
 }
 
-#features {
+#features, #header-getting-started {
     @include make-section($gray);
 }
 
@@ -72,6 +72,17 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: 0;
+}
+
+aside, main {
+    padding: 10px;
+}
+
+ol {
+    & li {
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
 }
 
 

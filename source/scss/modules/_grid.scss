@@ -20,23 +20,23 @@
 	clear: both;
 }
 
-.alpha-header {
+.grid-header {
   grid-area: header;
 }
 
-.alpha-main {
+.grid-main {
   grid-area: main;
 }
 
-.alpha-side-left {
+.grid-side-left {
   grid-area: side-left;
 }
 
-.alpha-side-right {
+.grid-side-right {
   grid-area: side-right;
 }
 
-.alpha-footer {
+.grid-footer {
   grid-area: footer;
 }
 
@@ -52,8 +52,8 @@
 }
 
 .gutter {
-	margin-left: 10px;
-	margin-right: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
 
 	&:first-child {
 		margin-left: 0;

@@ -59,6 +59,10 @@ hr {
   width: 100%;
   display: block; }
 
+blockquote {
+  background-color: rgba(151, 178, 232, 0.27);
+  padding: 15px; }
+
 footer {
   width: 100%;
   clear: both;
@@ -66,6 +70,9 @@ footer {
   position: relative;
   color: #f9f9f9;
   background: #252A34; }
+
+ol {
+  display: block; }
 
 .full {
   width: 100%;
@@ -121,19 +128,19 @@ footer {
   display: table;
   clear: both; }
 
-.alpha-header {
+.grid-header {
   grid-area: header; }
 
-.alpha-main {
+.grid-main {
   grid-area: main; }
 
-.alpha-side-left {
+.grid-side-left {
   grid-area: side-left; }
 
-.alpha-side-right {
+.grid-side-right {
   grid-area: side-right; }
 
-.alpha-footer {
+.grid-footer {
   grid-area: footer; }
 
 .col {
@@ -147,8 +154,8 @@ footer {
   flex-grow: 1; }
 
 .gutter {
-  margin-left: 10px;
-  margin-right: 10px; }
+  padding-left: 10px;
+  padding-right: 10px; }
   .gutter:first-child {
     margin-left: 0; }
   .gutter:last-child {
@@ -3323,7 +3330,7 @@ header {
     font-size: 0.7rem;
     vertical-align: text-bottom; }
 
-#features {
+#features, #header-getting-started {
   background-color: #ecf0f1;
   padding: 100px 0;
   display: block;
@@ -3342,6 +3349,13 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 0; }
+
+aside, main {
+  padding: 10px; }
+
+ol li {
+  font-size: 1.1rem;
+  font-weight: bold; }
 
 .btn-default {
   color: #1e90ff;

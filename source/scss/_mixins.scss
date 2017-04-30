@@ -1,6 +1,6 @@
-@mixin make-body() {
+@mixin make-body($body-bg, $body-font-size) {
 	background-color: $body-bg;
-	font-size: 16px;
+	font-size: $body-font-size;
 
 	@if (lightness($body-bg) < 30) {
   		color: $text-white;
@@ -40,6 +40,10 @@
 
 @mixin make-header($header-bg, $header-height:100vh) {
 	background-color: $header-bg;
+
+	@if ($header-height > 2vh) and ($header-height < 100vh) {
+		padding: ($header-height/2) 0;
+	}
 
 	@if ($navbar-position == fixed) {
   		padding-top: (42vh-$navbar-height);
@@ -121,7 +125,7 @@
 	}
 
 	@if $layout-type == $landing-page {
-		.alpha-aside {
+		.grid-aside {
 			display: none;
 		}
 	}
