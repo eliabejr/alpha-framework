@@ -3,23 +3,54 @@
 	h1 {
 		font-size: 2.8rem;
 	}
-	
+
 	.img-center-resize {
-	    width: 50%;
-	    vertical-align: middle;
-	    margin: 0 auto;
-	    display: block;
+    width: 50%;
+    vertical-align: middle;
+    margin: 0 auto;
+    display: block;
 	}
 
 	.drawer {
-    	margin-left: -7vw;
-    }
+  	margin-left: -7vw;
+  	right: 0px;
+  }
+
+	.tab-item span {
+		display: none;
+	}
+
+	.modal-dialog {
+		height: 100vh;
+		padding: 20px;
+		width: 100vw;
+	}
 
 }
 
 @media (max-width: $tablet) {
 	html {
 		font-size: 18px;
+	}
+
+	body {
+		overflow-x: hidden;
+	}
+
+	h1 {
+		font-size: 2.5rem;
+	}
+
+	h2 {
+		font-size: 2rem;
+	}
+
+	h3 {
+		font-size: 1.1rem;
+	}
+
+	aside {
+		margin: 20px auto;
 	}
 
 	.img-responsive {
@@ -32,27 +63,102 @@
 	}
 
 	.drawer,
+	.drawer-menu,
 	.drawer-menu ul,
 	.drawer-menu li {
-		display: block;
-	}
-
-	.drawer-menu {
-	    display: block;
+		align-items: center;
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
 	}
 
 	.img-center-resize {
-	    width: 50%;
-	    vertical-align: middle;
-	    margin: 0 auto;
-	    display: block;
+    width: 50%;
+    vertical-align: middle;
+    margin: 0 auto;
+    display: block;
+	}
+
+	.center-on-mobile {
+		margin-right: auto!important;
+		margin-left: auto!important;
+		justify-content: center;
 	}
 
 	.row {
 	    flex-flow: column;
 	}
 
+	.gutter {
+		padding-left: 0;
+		padding-right: 0;
+	}
 
+	#menu-principal {
+		display: none;
+	}
+
+	#menu-social,
+	#menu-btn-topo {
+		margin: 20px auto!important;
+	}
+
+	#ultimas-noticias {
+		padding: 50px;
+	}
+
+	#galeria-de-fotos {
+		h3 {
+			font-size: 1.4rem;
+			margin: 0 auto 30px;
+		}
+	}
+
+	.foto-depoimento-home {
+		height: 150px;
+		max-width: 150px;
+	}
+
+	.foto-depoimento {
+		margin-bottom: 15px;
+	}
+
+	.lei-header,
+	.noticia-footer,
+	.noticia-resumo {
+    flex-flow: row;
+  }
+
+	.data-noticia {
+		width: 15%;
+	}
+
+	#formulario {
+		.row {
+			padding: 0;
+		}
+
+		.campo-form {
+			padding: 10px 0;
+		}
+
+		input[type="submit"] {
+      width: 100%;
+    }
+	}
+
+	#foto-do-savanas {
+		height: 300px;
+
+		img {
+			margin-top: -180px;
+		}
+
+	}
+
+	.modal-dialog {
+		overflow-y: scroll;
+	}
 
 }
 
@@ -60,12 +166,11 @@
 
 	@for $i from 1 through $total-col {
 		.col-#{$i} {
-	  		padding: 10px;
-			max-width: percentage($i/$total-col);
-		  	-webkit-box-flex: 0;
-		  	-webkit-flex: 0 0 percentage($i/$total-col);
-		      	-ms-flex: 0 0 percentage($i/$total-col);
-		          	flex: 0 0 percentage($i/$total-col);
+  		max-width: percentage($i/$total-col);
+	  	-webkit-box-flex: 0;
+	  	-webkit-flex: 0 0 percentage($i/$total-col);
+	      	-ms-flex: 0 0 percentage($i/$total-col);
+	          	flex: 0 0 percentage($i/$total-col);
 		}
 	}
 
