@@ -4,7 +4,6 @@ const sass          = require("gulp-sass");
 const notify        = require("gulp-notify");
 const cssmin        = require("gulp-clean-css");
 const browserSync   = require('browser-sync').create();
-const imageop       = require("gulp-image-optimization");
 
 //////////////////////
 
@@ -13,6 +12,7 @@ var files = [
   'source/scss/**/*.scss',
   'source/js/*.js'
 ];
+
 
 var options = {
   server: "build/"
@@ -57,17 +57,6 @@ gulp.task("minify-css", function(){
 });
 
 
-// Optimize Images
-gulp.task("optimize-images", function(cb) {
-    gulp.src(["source/img/**/*.png","source/img/**/*.jpg","source/img/**/*.gif","source/img/**/*.jpeg"]).pipe(imageop({
-        optimizationLevel: 5,
-        progressive: true,
-        interlaced: true
-    }))
-    .on("error", notify.onError({title:"Error at optimize IMAGES", message:"<%= error.message %>"}))
-    .pipe(gulp.dest("build/img")).on("end", cb).on("error", cb);
-});
-
 // Minify Js
 gulp.task("compile-js", function() {
     gulp.src("source/js/*")
@@ -75,12 +64,18 @@ gulp.task("compile-js", function() {
         .pipe(gulp.dest("build/js"));
 });
 
+// Build Project
+gulp.task("prod", function () {
+    gulp.src(["build/**/*"])
+        .on("error", notify.onError({ title: "Error at Copy Build Files", message: "<%= error.message %>" }))
+        .pipe(gulp.dest("public/"));
+});
+
 gulp.task("watch", function() {
     gulp.watch("source/html/**/*",      ["compile-html"]);
     gulp.watch("source/scss/**/*",      ["compile-sass"]);
     gulp.watch("source/fonts/*",        ["copy-fonts"]);
     gulp.watch("source/css/style.css",  ["minify-css"]);
-    gulp.watch("source/img/**/*",       ["optimize-images"]);
     gulp.watch("source/js/*",           ["compile-js"]);
 });
 
@@ -88,9 +83,8 @@ gulp.task("watch", function() {
 gulp.task('server', ['compile-sass'], function() {
 
     browserSync.init(files, options)
-    
-    gulp.watch("src/sass/*.scss", ['sass']);
+    gulp.watch("src/js/*.js", ['compile-js']);
     gulp.watch(files).on('change', browserSync.reload);
 });
 
-gulp.task("default",["compile-html","compile-sass","copy-fonts","minify-css","optimize-images","compile-js","watch","server"]);
+gulp.task("default",["compile-html","compile-sass","copy-fonts","minify-css","compile-js","watch","server"]);
