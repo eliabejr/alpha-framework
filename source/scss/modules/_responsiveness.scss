@@ -94,68 +94,6 @@
 		padding-right: 0;
 	}
 
-	#menu-principal {
-		display: none;
-	}
-
-	#menu-social,
-	#menu-btn-topo {
-		margin: 20px auto!important;
-	}
-
-	#ultimas-noticias {
-		padding: 50px;
-	}
-
-	#galeria-de-fotos {
-		h3 {
-			font-size: 1.4rem;
-			margin: 0 auto 30px;
-		}
-	}
-
-	.foto-depoimento-home {
-		height: 150px;
-		max-width: 150px;
-	}
-
-	.foto-depoimento {
-		margin-bottom: 15px;
-	}
-
-	.lei-header,
-	.noticia-footer,
-	.noticia-resumo {
-    flex-flow: row;
-  }
-
-	.data-noticia {
-		width: 15%;
-	}
-
-	#formulario {
-		.row {
-			padding: 0;
-		}
-
-		.campo-form {
-			padding: 10px 0;
-		}
-
-		input[type="submit"] {
-      width: 100%;
-    }
-	}
-
-	#foto-do-savanas {
-		height: 300px;
-
-		img {
-			margin-top: -180px;
-		}
-
-	}
-
 	.modal-dialog {
 		overflow-y: scroll;
 	}
