@@ -13,7 +13,7 @@ Requisitos:
 4. Crie o servidor com: `gulp`
 5. Divirta-se!
 
-# Problemas com a task `watch` no Linux?
+## Problemas com a task `watch` no Linux?
 
 Basta rodar este comando no terminal:
 `echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p`
@@ -34,7 +34,7 @@ Requirements:
 4. Create the server with `gulp`
 5. Enjoy!
 
-# Troubles with watch task on Linux?
+## Troubles with watch task on Linux?
 
 Just run this command on terminal:
 `echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p`
