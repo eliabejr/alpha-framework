@@ -2,15 +2,22 @@ const gulp          = require("gulp");
 const pug           = require("gulp-pug");
 const sass          = require("gulp-sass");
 const notify        = require("gulp-notify");
+const imagemin      = require("gulp-imagemin");
 const cssmin        = require("gulp-clean-css");
-const browserSync   = require('browser-sync').create();
+const browserSync   = require("browser-sync").create();
+
+gulp.task("default", () =>
+    gulp.src("src/images/*")
+        .pipe(imagemin())
+        .pipe(gulp.dest("dist/images"))
+);
 
 //////////////////////
 
 var files = [
-  'source/html/**/*.pug',
-  'source/scss/**/*.scss',
-  'source/js/*.js'
+  "source/html/**/*.pug",
+  "source/scss/**/*.scss",
+  "source/js/*.js"
 ];
 
 
@@ -57,6 +64,24 @@ gulp.task("minify-css", function(){
 });
 
 
+// Optimize Images
+gulp.task("images", () =>
+    gulp.src("source/img/*")
+        .pipe(imagemin([
+            imagemin.gifsicle({ interlaced: true }),
+            imagemin.jpegtran({ progressive: true }),
+            imagemin.optipng({ optimizationLevel: 5 }),
+            imagemin.svgo({
+                plugins: [
+                    { removeViewBox: true },
+                    { cleanupIDs: false }
+                ]
+            })
+        ]))
+        .pipe(gulp.dest("build/img"))
+);
+
+
 // Minify Js
 gulp.task("compile-js", function() {
     gulp.src("source/js/*")
@@ -80,11 +105,11 @@ gulp.task("watch", function() {
 });
 
 // Browser reloading
-gulp.task('server', ['compile-sass'], function() {
+gulp.task("server", ["compile-sass"], function() {
 
     browserSync.init(files, options)
-    gulp.watch("src/js/*.js", ['compile-js']);
-    gulp.watch(files).on('change', browserSync.reload);
+    gulp.watch("src/js/*.js", ["compile-js"]);
+    gulp.watch(files).on("change", browserSync.reload);
 });
 
-gulp.task("default",["compile-html","compile-sass","copy-fonts","minify-css","compile-js","watch","server"]);
+gulp.task("default",["compile-html","compile-sass","copy-fonts","minify-css","images","compile-js","watch","server"]);
