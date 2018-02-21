@@ -99,17 +99,3 @@
 	}
 
 }
-
-@media (min-width: $tablet + 1) {
-
-	@for $i from 1 through $total-col {
-		.col-#{$i} {
-  		max-width: percentage($i/$total-col);
-	  	-webkit-box-flex: 0;
-	  	-webkit-flex: 0 0 percentage($i/$total-col);
-	      	-ms-flex: 0 0 percentage($i/$total-col);
-	          	flex: 0 0 percentage($i/$total-col);
-		}
-	}
-
-}
