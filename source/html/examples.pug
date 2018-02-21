@@ -77,10 +77,29 @@ html(lang='en')
           a(href='https://www.w3.org/TR/css3-grid-layout/', target='_blank') CSS Grid Layouts
           | , to make a new layout you only need type in style.css the following command: 
           em @include make-layout($LAYOUT-TYPE, $ROW-LAYOUT, $COL-GAP, $ROW-GAP);
+        p 
+          | By default, we have some layouts:
+          ul
+            li 
+              em @include make-layout($two-sidebars);
+            li 
+              em @include make-layout($landing-page);
+            li 
+              em @include make-layout($one-sidebar-right);
+            li 
+              em @include make-layout($one-sidebar-left);
+            li 
+              em @include make-layout($two-sidebars-right);
+            li 
+              em @include make-layout($two-sidebars-left);
+        
+        h4 Layout with 2 sidebars
+        br
         .grid
           .item.grid-header Header
           .item.grid-aside-left Aside
           .item.grid-main Main
           .item.grid-aside-right Aside
           .item.grid-footer Footer
+
   include templates/footer.pug
