@@ -14,14 +14,7 @@ body {
 }
 
 header {
-	@include make-header($bg-dark);
-    background-image: url(../img/bg-header.jpg);
-    box-shadow: inset 0 0 20px 0 rgba(0,0,0,0.3);
-    background-blend-mode: soft-light;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+	@include make-header($bg-white);
 
     & h3 {
         font-weight: 400;
@@ -29,7 +22,7 @@ header {
 }
 
 .navbar {
-	@include make-navbar($bg-dark);
+	@include make-navbar($bg-white);
 }
 
 // SECTIONS
@@ -42,14 +35,12 @@ header {
 
 #credits span {
     font-size: 0.9rem;
-    color: rgba(255,255,255,.8);
-    text-shadow: 0 1px 0 rgba(0,0,0,0.4);
+    color: rgba(0,0,0,.7);
 
     &:first-child:before,
     &:last-child:after {
         content: "";
     }
-
 
     &:after {
         content: " -";
@@ -63,26 +54,12 @@ header {
 }
 
 #get-started {
-	@include make-section($bg-dark);
-	background-image: url(../img/bg-home.jpg);
-    box-shadow: inset 0 0 20px 0 rgba(0,0,0,0.3);
-    background-blend-mode: soft-light;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+	@include make-section($gray);
     margin-bottom: 0;
 }
 
-aside, main {
-    padding: 10px;
-}
-
-ol {
-    & li {
-        font-size: 1.1rem;
-        font-weight: bold;
-    }
+#btc-address {
+    font-weight: 100;
 }
 
 
