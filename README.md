@@ -2,7 +2,7 @@
 
 Alpha Framework é um conjunto de soluções CSS que auxiliam desenvolvedores novatos a se familiarizar com frameworks. O framework ainda está em fase de desenvolvimento, ajudas são bem-vindas!
 
-Requisitos:
+## Requisitos:
  - NodeJS 5.x ou superior
 
 ## Como instalar:
@@ -23,7 +23,7 @@ Basta rodar este comando no terminal:
 
 Alpha Framework is a set of CSS solutions that help novice developers familiarize themselves with frameworks. The framework is still under development, collaborations are welcome!
 
-Requirements:
+## Requirements:
  - NodeJS 5.x or newer
 
 ## Get Started:
@@ -34,7 +34,7 @@ Requirements:
 4. Create the server with `gulp`
 5. Enjoy!
 
-## Troubles with watch task on Linux?
+## Troubles with `watch` task on Linux?
 
 Just run this command on terminal:
 `echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p`
