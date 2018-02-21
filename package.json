@@ -1,6 +1,6 @@
 {
   "name": "alpha-framework",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Do Simple, Do better.",
   "main": "index.js",
   "scripts": {
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EliabeJr/alpha-framework.git"
+    "url": "git+https://github.com/eliabejr/alpha-framework.git"
   },
   "author": "Eliabe Junior",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/EliabeJr/alpha-framework/issues"
+    "url": "https://github.com/eliabejr/alpha-framework/issues"
   },
-  "homepage": "https://github.com/EliabeJr/alpha-framework#readme",
+  "homepage": "https://github.com/eliabejr/alpha-framework#readme",
   "devDependencies": {
     "browser-sync": "^2.18.8",
     "gulp": "^3.9.1",
