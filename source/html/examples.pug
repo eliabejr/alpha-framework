@@ -8,7 +8,7 @@ html(lang='en')
     meta(name='viewport', content='width=device-width; initial-scale = 1.0; \
     maximum-scale=1.0; user-scalable=no')
   body
-    include templates/navbar.pug
+    include templates/navbar
     section#examples
       .container
         h2.text-center Examples
@@ -22,6 +22,8 @@ html(lang='en')
             li Buttons
           a(href='#layouts')
             li Layouts
+          a(href='#modal-section')
+            li Modal
         h3#grid.top-buffer Flex Grid System
         p
           | The grids works on 12 column-based system, you can change at any time on 
@@ -83,4 +85,9 @@ html(lang='en')
           .item.grid-main Main
           .item.grid-aside-right Aside
           .item.grid-footer Footer
-  include templates/footer.pug
+        h3#modal-section.top-buffer Modal with pure CSS
+        br
+        label(for="modal-default" aria-selected="true").btn.btn-default
+          | Open Modal
+        include templates/modal.default.pug
+  include templates/footer
