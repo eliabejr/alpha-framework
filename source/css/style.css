@@ -163,7 +163,7 @@ ol {
 
 .col-1 {
   width: 100%;
-  padding: 10px 0; }
+  padding: 0 10px; }
   .col-1:first-child {
     padding-left: 0; }
   .col-1:last-child {
@@ -171,7 +171,7 @@ ol {
 
 .col-2 {
   width: 100%;
-  padding: 10px 0; }
+  padding: 0 10px; }
   .col-2:first-child {
     padding-left: 0; }
   .col-2:last-child {
@@ -179,7 +179,7 @@ ol {
 
 .col-3 {
   width: 100%;
-  padding: 10px 0; }
+  padding: 0 10px; }
   .col-3:first-child {
     padding-left: 0; }
   .col-3:last-child {
@@ -187,7 +187,7 @@ ol {
 
 .col-4 {
   width: 100%;
-  padding: 10px 0; }
+  padding: 0 10px; }
   .col-4:first-child {
     padding-left: 0; }
   .col-4:last-child {
@@ -195,7 +195,7 @@ ol {
 
 .col-5 {
   width: 100%;
-  padding: 10px 0; }
+  padding: 0 10px; }
   .col-5:first-child {
     padding-left: 0; }
   .col-5:last-child {
@@ -203,7 +203,7 @@ ol {
 
 .col-6 {
   width: 100%;
-  padding: 10px 0; }
+  padding: 0 10px; }
   .col-6:first-child {
     padding-left: 0; }
   .col-6:last-child {
@@ -211,7 +211,7 @@ ol {
 
 .col-7 {
   width: 100%;
-  padding: 10px 0; }
+  padding: 0 10px; }
   .col-7:first-child {
     padding-left: 0; }
   .col-7:last-child {
@@ -219,7 +219,7 @@ ol {
 
 .col-8 {
   width: 100%;
-  padding: 10px 0; }
+  padding: 0 10px; }
   .col-8:first-child {
     padding-left: 0; }
   .col-8:last-child {
@@ -227,7 +227,7 @@ ol {
 
 .col-9 {
   width: 100%;
-  padding: 10px 0; }
+  padding: 0 10px; }
   .col-9:first-child {
     padding-left: 0; }
   .col-9:last-child {
@@ -235,7 +235,7 @@ ol {
 
 .col-10 {
   width: 100%;
-  padding: 10px 0; }
+  padding: 0 10px; }
   .col-10:first-child {
     padding-left: 0; }
   .col-10:last-child {
@@ -243,7 +243,7 @@ ol {
 
 .col-11 {
   width: 100%;
-  padding: 10px 0; }
+  padding: 0 10px; }
   .col-11:first-child {
     padding-left: 0; }
   .col-11:last-child {
@@ -251,7 +251,7 @@ ol {
 
 .col-12 {
   width: 100%;
-  padding: 10px 0; }
+  padding: 0 10px; }
   .col-12:first-child {
     padding-left: 0; }
   .col-12:last-child {
@@ -3297,157 +3297,3 @@ button > i {
   margin: 0;
   overflow: visible;
   clip: auto; }
-
-body {
-  background-color: #f9f9f9;
-  font-size: 16px;
-  color: #252A34; }
-
-header {
-  background-color: #252A34;
-  height: 85vh;
-  padding-top: 27vh;
-  color: #f9f9f9;
-  background-image: url(../img/bg-header.jpg);
-  box-shadow: inset 0 0 20px 0 rgba(0, 0, 0, 0.3);
-  background-blend-mode: soft-light;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
-  header h3 {
-    font-weight: 400; }
-
-.navbar {
-  width: 100%;
-  display: block;
-  height: 15vh;
-  position: relative;
-  line-height: 15vh;
-  background-color: #252A34;
-  color: #f9f9f9; }
-  .navbar .icon-bar {
-    background-color: #f9f9f9; }
-
-#why, #examples {
-  background-color: #f7f7f7;
-  padding: 100px 0;
-  display: block;
-  color: #252A34; }
-
-#credits span {
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.8);
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4); }
-  #credits span:first-child:before, #credits span:last-child:after {
-    content: ""; }
-  #credits span:after {
-    content: " -";
-    font-size: 0.7rem;
-    vertical-align: text-bottom; }
-
-#features, #header-getting-started {
-  background-color: #ecf0f1;
-  padding: 100px 0;
-  display: block;
-  color: #252A34; }
-
-#get-started {
-  background-color: #252A34;
-  padding: 100px 0;
-  display: block;
-  color: #f9f9f9;
-  background-image: url(../img/bg-home.jpg);
-  box-shadow: inset 0 0 20px 0 rgba(0, 0, 0, 0.3);
-  background-blend-mode: soft-light;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-bottom: 0; }
-
-aside, main {
-  padding: 10px; }
-
-ol li {
-  font-size: 1.1rem;
-  font-weight: bold; }
-
-.btn-default {
-  color: #1e90ff;
-  border-color: #1e90ff; }
-  .btn-default a {
-    color: inherit; }
-  .btn-default:hover {
-    color: white;
-    background: #1e90ff;
-    border-color: #1e90ff; }
-
-.btn-red {
-  color: #e74c3c;
-  border-color: #e74c3c; }
-  .btn-red a {
-    color: inherit; }
-  .btn-red:hover {
-    color: white;
-    background: #e74c3c;
-    border-color: #e74c3c; }
-
-.btn-green {
-  color: #1D9F75;
-  border-color: #1D9F75; }
-  .btn-green a {
-    color: inherit; }
-  .btn-green:hover {
-    color: white;
-    background: #1D9F75;
-    border-color: #1D9F75; }
-
-.btn-blue {
-  color: #1e90ff;
-  border-color: #1e90ff; }
-  .btn-blue a {
-    color: inherit; }
-  .btn-blue:hover {
-    color: white;
-    background: #1e90ff;
-    border-color: #1e90ff; }
-
-.btn-orange {
-  color: #e67e22;
-  border-color: #e67e22; }
-  .btn-orange a {
-    color: inherit; }
-  .btn-orange:hover {
-    color: white;
-    background: #e67e22;
-    border-color: #e67e22; }
-
-.btn-white {
-  color: #f7f7f7;
-  border-color: #f7f7f7; }
-  .btn-white a {
-    color: inherit; }
-  .btn-white:hover {
-    color: white;
-    background: #f7f7f7;
-    border-color: #f7f7f7; }
-
-.btn-white:hover {
-  color: #252A34; }
-
-.grid {
-  display: grid;
-  height: 400px;
-  grid-template-columns: auto;
-  grid-template-rows: 20% 60% 20%;
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
-  grid-template-areas: "header header header" "side-left   main   side-right" "footer footer footer"; }
-
-.grid {
-  grid-template-rows: 20% 60% 20%; }
-
-@supports not (display: grid) {
-  .grid {
-    display: none !important; } }
