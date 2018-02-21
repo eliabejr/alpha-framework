@@ -4,9 +4,6 @@ TMP_DIR=/tmp/site-bundle
 mkdir $TMP_DIR
 
 # Create bundle
-npm install
-npm install -g gulp
-gulp
 git commit -am "Create new bundle"
 
 # Copy build to temp folder
