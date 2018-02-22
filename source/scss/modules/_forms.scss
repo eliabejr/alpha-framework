@@ -1,8 +1,33 @@
-input[type="text"],
+.form {
+  width: 100%;
+  margin: 10px 0;
+
+  .field {
+    margin: 10px 0;
+
+    label {
+      color: $bg-dark;
+      font-family: $font-theme;
+      font-weight: 400;
+    }
+
+    .helper-text {
+      color: $bg-dark;
+      font-family: $font-theme;
+      font-size: .7rem;
+      padding-left: 3px;
+    }
+  }
+}
+
+input[type="email"],
 input[type="password"],
-input[type="email"] {
+input[type="text"],
+input[type="tel"],
+select {
   border: none;
   box-shadow: 0 5px 10px 0px rgba(0,0,0,.08);
+  background: #ffffff;
   color: $bg-dark;
   font-family: $font-theme;
   display: block;
@@ -14,4 +39,17 @@ input[type="email"] {
   &:invalid {
     color: $red;
   }
+}
+
+
+textarea {
+  border: none;
+  box-shadow: 0 5px 10px 0px rgba(0,0,0,.08);
+  background: #ffffff;
+  color: $bg-dark;
+  font-family: $font-theme;
+  min-height: 70px;
+  padding: 15px;
+  transition: all .2s;
+  width: 100%;
 }

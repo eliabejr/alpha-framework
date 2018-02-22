@@ -117,14 +117,43 @@ html(lang='en')
         section#forms
           h3 Forms
 
+          form.form
+            .row
+              .col-6
+                .field
+                  label(for="name") Text Input
+                  input(type="text", name="name", placeholder="Name Input")
+                  span.helper-text Helper text for this input
+
+              .col-6
+                .field
+                  label(for="email") Email Input
+                  input(type="email", name="email", placeholder="Email Input", pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$")
+                  span.helper-text Helper text for this input
+
+            .row
+              .col-6
+                .field
+                  label(for="phone") Phone Input              
+                  input(type="tel", name="phone", placeholder="Phone Input")
+                  span.helper-text Helper text for this input
+              .col-6
+                .field
+                  label(for="select") Select Input           
+                  select(name="select", placeholder="Select")
+                    option(value="", disabled, selected) Select a Option
+                    option(value="Option 1") Option 1
+                    option(value="Option 2") Option 2
+                    option(value="Option 3") Option 3
+                  span.helper-text Helper text for this input
           .row
-            .col-4
-              input(type="text", name="name", placeholder="Name Input")
-            .col-4.flex.flex-middle
-              h4 Text Input
+            .col-12
+              .field
+                textarea(name="description", placeholder="Your description here")
+
           .row
-            .col-4
-              input(type="email", name="email", placeholder="Email Input")
-            .col-4.flex.flex-middle
-              h4 Text Email
+            .col-12.flex.flex-right
+              button.btn.btn-default Submit
+
+
   include templates/footer
