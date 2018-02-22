@@ -91,6 +91,11 @@ ol {
 	display: block;
 }
 
+.hidden {
+	display: none;
+	visibility: hidden;
+}
+
 .text-center {
 	text-align: center;
 }
@@ -120,12 +125,36 @@ ol {
 	float: left;
 }
 
-.top-buffer {
-	padding-top: 50px;
+.flex {
+	display: flex;
+	&-column {
+		flex-direction: column;
+	}
+	&-row {
+		flex-direction: row;
+	}
+	&-center {
+		justify-content: center;
+	}
+	&-left {
+		justify-content: flex-start;
+	}
+	&-right {
+		justify-content: flex-end;
+	}
+	&-top {
+		align-items: flex-start;
+	}
+	&-middle {
+		align-items: center;
+	}
+	&-bottom {
+		align-items: flex-end;
+	}
 }
 
-.middle {
-	align-items: center;
+.top-buffer {
+	padding-top: 50px;
 }
 
 .transparent {
