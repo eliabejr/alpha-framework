@@ -78,7 +78,7 @@
 
 @mixin make-section($section-bg) {
 	background-color: $section-bg;
-	padding: 100px 0;
+	padding: 50px 0;
 	display: block;
 
 	@if (lightness($section-bg) < 30) {
@@ -154,4 +154,28 @@
 	    }
 	}
 
+}
+
+@mixin make-margin($direction, $margin) {
+	.m-#{$direction}-#{$margin} {
+		margin-#{$direction}: #{$margin}px;
+	}
+}
+
+@mixin make-padding($direction, $padding) {
+	.p-#{$direction}-#{$padding} {
+		padding-#{$direction}: #{$padding}px;
+	}
+}
+
+@mixin make-width($width, $unit:vw) {
+	.w-#{$width} {
+		width: #{$width}$unit;
+	}
+}
+
+@mixin make-height($height, $unit:vh) {
+	.h-#{$height} {
+		height: #{$height}$unit;
+	}
 }
