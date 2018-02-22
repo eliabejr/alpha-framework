@@ -1,0 +1,13 @@
+.modal
+  input#modal-default.modal-open(type="checkbox" hidden="")
+  .modal-wrap(aria-hidden="true" role="dialog")
+    label.modal-overlay(for="modal-default")
+    .modal-dialog
+      .modal-header
+        h3.text-center Modal Header
+        label.btn-close(for="modal-default" aria-hidden="true") ×
+      .modal-body.row
+        p Modal Description
+      .modal-footer
+        button.btn.btn-red Cancel
+        button.btn.btn-green Let's Go!
