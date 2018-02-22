@@ -25,6 +25,11 @@ header {
 	@include make-navbar($bg-white);
 }
 
+@include make-margin(top, 100);
+@include make-padding(top, 100);
+@include make-width(100,%);
+@include make-height(100,vh);
+
 // SECTIONS
 // -------------------------------
 
