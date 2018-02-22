@@ -2,7 +2,8 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  outline: none; }
 
 audio,
 canvas,
@@ -22,7 +23,7 @@ img {
 
 body {
   overflow-x: hidden;
-  font-family: sans-serif;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, Arial, sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: subpixel-antialiased;
   font-weight: 400; }
@@ -334,6 +335,54 @@ ol {
     .col-12:last-child {
       padding-right: 0; } }
 
+@font-face {
+  font-family: 'Montserrat';
+  src: url("fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("fonts/Montserrat-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("fonts/Montserrat-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("fonts/Montserrat-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("fonts/Montserrat-Bold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("fonts/Montserrat-BoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("fonts/Montserrat-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("fonts/Montserrat-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic; }
+
 * {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -354,6 +403,9 @@ em {
   letter-spacing: 1px;
   padding: 5px;
   border-radius: 3px; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat'; }
 
 h1 {
   font-size: 3.2rem; }
@@ -392,9 +444,18 @@ input[type="text"],
 input[type="password"],
 input[type="email"] {
   border: none;
+  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.08);
+  color: #252A34;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, Arial, sans-serif;
   display: block;
-  padding: 10px;
-  width: 100%; }
+  padding: 15px;
+  transition: all .2s;
+  width: 100%;
+  -webkit-appearance: none; }
+  input[type="text"]:invalid,
+  input[type="password"]:invalid,
+  input[type="email"]:invalid {
+    color: #e74c3c; }
 
 label[for^="modal"] {
   cursor: pointer; }
@@ -531,7 +592,8 @@ label[for^="modal"] {
 
 .brand {
   font-size: 2em;
-  font-weight: 600;
+  font-family: "Montserrat";
+  font-weight: 300;
   display: inline; }
 
 .drawer {
@@ -3423,7 +3485,8 @@ button > i {
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  outline: none; }
 
 audio,
 canvas,
@@ -3443,7 +3506,7 @@ img {
 
 body {
   overflow-x: hidden;
-  font-family: sans-serif;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, Arial, sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: subpixel-antialiased;
   font-weight: 400; }
@@ -3755,6 +3818,54 @@ ol {
     .col-12:last-child {
       padding-right: 0; } }
 
+@font-face {
+  font-family: 'Montserrat';
+  src: url("fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("fonts/Montserrat-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("fonts/Montserrat-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("fonts/Montserrat-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("fonts/Montserrat-Bold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("fonts/Montserrat-BoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("fonts/Montserrat-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("fonts/Montserrat-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic; }
+
 * {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -3775,6 +3886,9 @@ em {
   letter-spacing: 1px;
   padding: 5px;
   border-radius: 3px; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat'; }
 
 h1 {
   font-size: 3.2rem; }
@@ -3833,7 +3947,8 @@ h3 {
 
 .brand {
   font-size: 2em;
-  font-weight: 600;
+  font-family: "Montserrat";
+  font-weight: 300;
   display: inline; }
 
 .drawer {
@@ -6733,7 +6848,7 @@ header {
   padding-top: 27vh;
   color: #252A34; }
   header h3 {
-    font-weight: 400; }
+    font-weight: 300; }
 
 .navbar {
   width: 100%;
@@ -6751,6 +6866,9 @@ header {
 
 .m-top-100 {
   margin-top: 100px; }
+
+.p-left-50 {
+  padding-left: 50px; }
 
 .p-top-100 {
   padding-top: 100px; }

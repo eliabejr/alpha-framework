@@ -2,6 +2,7 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	outline: none;
 }
 
 audio,
@@ -22,10 +23,10 @@ img {
 
 body {
 	overflow-x: hidden;
-    font-family: sans-serif;
-    line-height: 1.5;
-    -webkit-font-smoothing: subpixel-antialiased;
-    font-weight: 400;
+	font-family: $font-theme;
+	line-height: 1.5;
+	-webkit-font-smoothing: subpixel-antialiased;
+	font-weight: 400;
 }
 
 a {
