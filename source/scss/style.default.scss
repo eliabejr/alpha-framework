@@ -68,7 +68,7 @@ header {
 
 @include make-button(default,$color-theme);
 @include make-button(red,$red);
-@include make-button(green,$green);
+@include make-button(green,$emerald);
 @include make-button(blue,$blue);
 @include make-button(orange,$orange);
 @include make-button(white,$white);
