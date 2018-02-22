@@ -1,14 +1,3 @@
-@import "variables";
-@import "base";
-@import "mixins";
-@import "modules/grid";
-@import "modules/typo";
-@import "modules/navbar";
-@import "modules/buttons";
-@import "modules/animations";
-@import "modules/responsiveness";
-@import "modules/font-awesome/style";
-
 body {
     @include make-body($bg-white, 16px);
 }
@@ -17,7 +6,7 @@ header {
 	@include make-header($bg-white);
 
     & h3 {
-        font-weight: 400;
+        font-weight: 300;
     }
 }
 
@@ -25,9 +14,18 @@ header {
 	@include make-navbar($bg-white);
 }
 
+@include make-margin(top, 100);
+@include make-padding(left, 50);
+@include make-padding(top, 100);
+@include make-width(100,%);
+@include make-height(100,vh);
+
 // SECTIONS
 // -------------------------------
 
+section {
+    @include make-section($white);
+}
 
 #why, #examples {
     @include make-section($white);
@@ -68,7 +66,7 @@ header {
 
 @include make-button(default,$color-theme);
 @include make-button(red,$red);
-@include make-button(green,$green);
+@include make-button(green,$emerald);
 @include make-button(blue,$blue);
 @include make-button(orange,$orange);
 @include make-button(white,$white);
