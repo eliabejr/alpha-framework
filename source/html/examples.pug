@@ -12,8 +12,7 @@ html(lang='en')
     section#examples
       .container
         h2.text-center Examples
-        p
-          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error excepturi pariatur illo eligendi doloribus neque, dolorum, itaque, rerum libero atque quod nobis labore totam id sequi odit alias repudiandae.
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error excepturi pariatur illo eligendi doloribus neque, dolorum, itaque, rerum libero atque quod nobis labore totam id sequi odit alias repudiandae.
         h3 Summary:
         ol
           a(href='#grids')
@@ -24,89 +23,137 @@ html(lang='en')
             li Layouts
           a(href='#modal-section')
             li Modal
-        h3#grid.top-buffer Flex Grid System
-        p
-          | The grids works on 12 column-based system, you can change at any time on 
-          em source/scss/_variables.scss
-          | . We've used Sass, the file with grid settings it's at 
-          em source/scss/modules/_grids.scss
-          | .
-        .row
-          .col-4
-            .item.text-center
-              p .col-4
-          .col-4
-            .item.text-center
-              p .col-4
-          .col-4
-            .item.text-center
-              p .col-4
-        .row
-          .col-6
-            .item.text-center
-              p .col-6
-          .col-6
-            .item.text-center
-              p .col-6
-        .row
-          .col-12
-            .item.text-center
-              p .col-12
-        h3#buttons.top-buffer Buttons
-        p
-          | In Alpha, you can make infinite buttons with this line on style.css: 
-          em @include make-button(COLOR,$COLOR);
-          | .
-        p
-          | Currently, we have 3 basic colors: red, green, blue. You can make/modify your own button any time.
-        br
-        .row
-          .col-6
-            h4 Squared
-            button.btn.btn-red Click Me
-            button.btn.btn-green Click Me
-            button.btn.btn-blue Click Me
-            button.btn.btn-orange Click Me
-          .col-6
-            h4 Rounded
-            button.btn.btn-red.text-center.rounded Click Me
-            button.btn.btn-green.text-center.rounded Click Me
-            button.btn.btn-blue.text-center.rounded Click Me
-            button.btn.btn-orange.text-center.rounded Click Me
-        h3#layouts.top-buffer CSS Grid Layout
-        p
-          | Alpha v1 have support to new technologies in front-end, like 
-          a(href='https://www.w3.org/TR/css3-grid-layout/', target='_blank') CSS Grid Layouts
-          | , to make a new layout you only need type in style.css the following command: 
-          em @include make-layout($LAYOUT-TYPE, $ROW-LAYOUT, $COL-GAP, $ROW-GAP);
-        p 
-          | By default, we have some layouts:
-          ul
-            li 
-              em @include make-layout($two-sidebars);
-            li 
-              em @include make-layout($landing-page);
-            li 
-              em @include make-layout($one-sidebar-right);
-            li 
-              em @include make-layout($one-sidebar-left);
-            li 
-              em @include make-layout($two-sidebars-right);
-            li 
-              em @include make-layout($two-sidebars-left);
+          a(href='#forms')
+            li Forms
+        section#grids
+          h3 Flex Grid System
+          p The grids works on 12 column-based system, you can change at any time on 
+            em source/scss/_variables.scss
+            | . We've used Sass, the file with grid settings it's at 
+            em source/scss/modules/_grids.scss
+            | .
+          .row
+            .col-4
+              .item.text-center
+                p .col-4
+            .col-4
+              .item.text-center
+                p .col-4
+            .col-4
+              .item.text-center
+                p .col-4
+          .row
+            .col-6
+              .item.text-center
+                p .col-6
+            .col-6
+              .item.text-center
+                p .col-6
+          .row
+            .col-12
+              .item.text-center
+                p .col-12
         
-        h4 Layout with 2 sidebars
-        br
-        .grid
-          .item.grid-header Header
-          .item.grid-aside-left Aside
-          .item.grid-main Main
-          .item.grid-aside-right Aside
-          .item.grid-footer Footer
+        section#buttons
+          h3 Buttons
+          p In Alpha, you can make infinite buttons with this line on style.css: 
+            em @include make-button(COLOR,$COLOR);
+            | .
+          p Currently, we have 3 basic colors: red, green, blue. You can make/modify your own button any time.
+          br
+          .row
+            .col-6
+              h4 Squared
+              button.btn.btn-red Click Me
+              button.btn.btn-green Click Me
+              button.btn.btn-blue Click Me
+              button.btn.btn-orange Click Me
+            .col-6
+              h4 Rounded
+              button.btn.btn-red.text-center.rounded Click Me
+              button.btn.btn-green.text-center.rounded Click Me
+              button.btn.btn-blue.text-center.rounded Click Me
+              button.btn.btn-orange.text-center.rounded Click Me
 
-        h3#modal-section.top-buffer Modal with pure CSS
-        br
-        label(for="modal-default" aria-selected="true").btn.btn-default
-          | Open Modal
-        include templates/modal.default.pug
+        section#layouts    
+          h3 CSS Grid Layout
+          p
+            | Alpha v1 have support to new technologies in front-end, like 
+            a(href='https://www.w3.org/TR/css3-grid-layout/', target='_blank') CSS Grid Layouts
+            | , to make a new layout you only need type in style.css the following command: 
+            em @include make-layout($LAYOUT-TYPE, $ROW-LAYOUT, $COL-GAP, $ROW-GAP);
+          p 
+            | By default, we have some layouts:
+            ul
+              li 
+                em @include make-layout($two-sidebars);
+              li 
+                em @include make-layout($landing-page);
+              li 
+                em @include make-layout($one-sidebar-right);
+              li 
+                em @include make-layout($one-sidebar-left);
+              li 
+                em @include make-layout($two-sidebars-right);
+              li 
+                em @include make-layout($two-sidebars-left);
+          
+          h4 Layout with 2 sidebars
+          br
+          .grid
+            .item.grid-header Header
+            .item.grid-aside-left Aside
+            .item.grid-main Main
+            .item.grid-aside-right Aside
+            .item.grid-footer Footer
+
+        section#modal-section
+          h3 Modal with pure CSS
+          br
+          label(for="modal-default" aria-selected="true").btn.btn-default
+            | Open Modal
+          include templates/modal.default.pug
+
+        section#forms
+          h3 Forms
+
+          form.form
+            .row
+              .col-6
+                .field
+                  label(for="name") Text Input
+                  input(type="text", name="name", placeholder="Name Input")
+                  span.helper-text Helper text for this input
+
+              .col-6
+                .field
+                  label(for="email") Email Input
+                  input(type="email", name="email", placeholder="Email Input", pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$")
+                  span.helper-text Helper text for this input
+
+            .row
+              .col-6
+                .field
+                  label(for="phone") Phone Input              
+                  input(type="tel", name="phone", placeholder="Phone Input")
+                  span.helper-text Helper text for this input
+              .col-6
+                .field
+                  label(for="select") Select Input           
+                  select(name="select", placeholder="Select")
+                    option(value="", disabled, selected) Select a Option
+                    option(value="Option 1") Option 1
+                    option(value="Option 2") Option 2
+                    option(value="Option 3") Option 3
+                  span.helper-text Helper text for this input
+          .row
+            .col-12
+              .field
+                textarea(name="description", placeholder="Your description here")
+
+          .row
+            .col-12.flex.flex-right
+              button.btn.btn-default Submit
+
+
   include templates/footer

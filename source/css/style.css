@@ -2,7 +2,8 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  outline: none; }
 
 audio,
 canvas,
@@ -22,7 +23,7 @@ img {
 
 body {
   overflow-x: hidden;
-  font-family: sans-serif;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, Arial, sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: subpixel-antialiased;
   font-weight: 400; }
@@ -334,6 +335,54 @@ ol {
     .col-12:last-child {
       padding-right: 0; } }
 
+@font-face {
+  font-family: 'Montserrat';
+  src: url("fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("fonts/Montserrat-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("fonts/Montserrat-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("fonts/Montserrat-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("fonts/Montserrat-Bold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("fonts/Montserrat-BoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("fonts/Montserrat-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("fonts/Montserrat-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic; }
+
 * {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -354,6 +403,9 @@ em {
   letter-spacing: 1px;
   padding: 5px;
   border-radius: 3px; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat'; }
 
 h1 {
   font-size: 3.2rem; }
@@ -387,6 +439,54 @@ h3 {
 
 .amethyst {
   color: #9b59b6; }
+
+.form {
+  width: 100%;
+  margin: 10px 0; }
+  .form .field {
+    margin: 10px 0; }
+    .form .field label {
+      color: #252A34;
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, Arial, sans-serif;
+      font-weight: 400; }
+    .form .field .helper-text {
+      color: #252A34;
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, Arial, sans-serif;
+      font-size: .7rem;
+      padding-left: 3px; }
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="tel"],
+select {
+  border: none;
+  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+  color: #252A34;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, Arial, sans-serif;
+  display: block;
+  padding: 15px;
+  transition: all .2s;
+  width: 100%;
+  -webkit-appearance: none; }
+  input[type="email"]:invalid,
+  input[type="password"]:invalid,
+  input[type="text"]:invalid,
+  input[type="tel"]:invalid,
+  select:invalid {
+    color: #e74c3c; }
+
+textarea {
+  border: none;
+  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+  color: #252A34;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, Arial, sans-serif;
+  min-height: 70px;
+  padding: 15px;
+  transition: all .2s;
+  width: 100%; }
 
 label[for^="modal"] {
   cursor: pointer; }
@@ -523,7 +623,8 @@ label[for^="modal"] {
 
 .brand {
   font-size: 2em;
-  font-weight: 600;
+  font-family: "Montserrat";
+  font-weight: 300;
   display: inline; }
 
 .drawer {
@@ -3415,7 +3516,8 @@ button > i {
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  outline: none; }
 
 audio,
 canvas,
@@ -3435,7 +3537,7 @@ img {
 
 body {
   overflow-x: hidden;
-  font-family: sans-serif;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, Arial, sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: subpixel-antialiased;
   font-weight: 400; }
@@ -3747,6 +3849,54 @@ ol {
     .col-12:last-child {
       padding-right: 0; } }
 
+@font-face {
+  font-family: 'Montserrat';
+  src: url("fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("fonts/Montserrat-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("fonts/Montserrat-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("fonts/Montserrat-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("fonts/Montserrat-Bold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("fonts/Montserrat-BoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("fonts/Montserrat-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("fonts/Montserrat-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic; }
+
 * {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -3767,6 +3917,9 @@ em {
   letter-spacing: 1px;
   padding: 5px;
   border-radius: 3px; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat'; }
 
 h1 {
   font-size: 3.2rem; }
@@ -3825,7 +3978,8 @@ h3 {
 
 .brand {
   font-size: 2em;
-  font-weight: 600;
+  font-family: "Montserrat";
+  font-weight: 300;
   display: inline; }
 
 .drawer {
@@ -6725,7 +6879,7 @@ header {
   padding-top: 27vh;
   color: #252A34; }
   header h3 {
-    font-weight: 400; }
+    font-weight: 300; }
 
 .navbar {
   width: 100%;
@@ -6744,6 +6898,9 @@ header {
 .m-top-100 {
   margin-top: 100px; }
 
+.p-left-50 {
+  padding-left: 50px; }
+
 .p-top-100 {
   padding-top: 100px; }
 
@@ -6753,9 +6910,15 @@ header {
 .h-100 {
   height: 100vh; }
 
+section {
+  background-color: #f7f7f7;
+  padding: 50px 0;
+  display: block;
+  color: #252A34; }
+
 #why, #examples {
   background-color: #f7f7f7;
-  padding: 100px 0;
+  padding: 50px 0;
   display: block;
   color: #252A34; }
 
@@ -6771,13 +6934,13 @@ header {
 
 #features, #header-getting-started {
   background-color: #ecf0f1;
-  padding: 100px 0;
+  padding: 50px 0;
   display: block;
   color: #252A34; }
 
 #get-started {
   background-color: #ecf0f1;
-  padding: 100px 0;
+  padding: 50px 0;
   display: block;
   color: #252A34;
   margin-bottom: 0; }
