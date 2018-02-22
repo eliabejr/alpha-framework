@@ -78,7 +78,7 @@
 
 @mixin make-section($section-bg) {
 	background-color: $section-bg;
-	padding: 100px 0;
+	padding: 50px 0;
 	display: block;
 
 	@if (lightness($section-bg) < 30) {
