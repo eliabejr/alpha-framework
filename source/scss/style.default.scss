@@ -28,6 +28,9 @@ header {
 // SECTIONS
 // -------------------------------
 
+section {
+    @include make-section($white);
+}
 
 #why, #examples {
     @include make-section($white);
