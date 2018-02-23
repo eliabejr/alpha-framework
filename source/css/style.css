@@ -630,7 +630,7 @@ label[for^="modal"] {
 .drawer {
   width: 15vh;
   height: 15vh;
-  margin-left: -6vw;
+  margin-left: -8vw;
   margin-right: 3vw;
   background-image: none;
   background-color: transparent;
@@ -645,11 +645,11 @@ label[for^="modal"] {
   .drawer .icon-bar {
     background-color: #fff;
     display: block;
-    width: 40px;
     height: 5px;
     margin-top: 6px;
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto;
+    width: 40px; }
     .drawer .icon-bar:first-child {
       margin-top: 0; }
   .drawer:hover, .drawer:active {
@@ -661,11 +661,10 @@ label[for^="modal"] {
   background: #1b1f27;
   box-shadow: 2px -30px 38px -1px rgba(0, 0, 0, 0.4);
   height: 100vh;
-  padding-top: 16vh;
   position: absolute;
   left: 0;
   top: 0;
-  width: 60vw;
+  width: 100vw;
   z-index: 9; }
   .drawer-menu li {
     padding: 20px; }
@@ -1132,7 +1131,7 @@ button > i {
     margin: 0 auto;
     display: block; }
   .drawer {
-    margin-left: -7vw;
+    margin-left: -8vw;
     right: 0px; }
   .tab-item span {
     display: none; }
